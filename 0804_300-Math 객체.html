@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>300-Math 객체</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>객체의 활용</h1>
+        <p>3.4의 무조건 내림 = <span id="floor">?</span></p>
+        <p>3.4의 무조건 올림 = <span id="ceil">?</span></p>
+        <p>4.635328의 반올림 = <span id="round">?</span></p>
+        <p>0~1 사이의 난수 발생 <span id="random">?</span></p>
+    </div>
+    <script>
+        //0~8사이의 난수(실수)
+        let num = Math.random() * 8;
+        console.log('num = ' + num);
+
+        //0~7 사이의 정수
+        let int = Math.floor(num);
+        console.log('int = ' + int);
+
+        //문제 : 10~17 사이의 정수를 발생시키는 코드
+        let result = 10 + Math.floor(Math.random() * 8);
+        console.log('result = ', result);
+
+        const $random = document.getElementById('random')
+        $random.textContent = Math.random();
+
+        const $floor = document.getElementById('floor');
+        //소수점 이하 무조건 내림
+        $floor.innerText = Math.floor(3.4);//3
+
+        const $ceil = document.getElementById('ceil');
+        $ceil.innerText = Math.ceil(3.4);//4
+
+        const $round = document.getElementById('round');
+        $round.textContent = Math.round(4.635328);
+
+    </script>
+</body>
+
+</html>

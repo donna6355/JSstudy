@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>630-setInterval(), clearInterval()-달리는 캐릭터</title>
+    <style>
+        #wrap {
+            text-align: center;
+        }
+
+        h1 {
+            height: 100px;
+            line-height: 100px;
+        }
+
+        button {
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            let intervalId = null;
+
+            $('.start').on('click', function () {
+                clearInterval(intervalId);
+                let num = 1;
+                intervalId = setInterval(function () {
+                    if (num < 10) {
+                        num++;
+                        $('img').attr({ src: 'images/run_' + num + '.gif' })
+                    } else {
+                        num = 1;
+                        $('img').attr({ src: 'images/run_' + num + '.gif' })
+                    }
+                }, 100)
+            })
+            $('.stop').on('click', function () {
+                clearInterval(intervalId);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>달리는 캐릭터</h1>
+        <p><img src="images/run_1.gif" alt="#" /></p>
+        <button class="start">출발</button>
+        <button class="stop">정지</button>
+    </div>
+</body>
+
+</html>

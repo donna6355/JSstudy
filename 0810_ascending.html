@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>음계</title>
+    <script>
+        // const code = { c: 1, d: 2, e: 3, f: 4, g: 5, a: 6, b: 7, C: 8 };
+        let input = prompt('8자리 숫자를 입력해라');
+        if (parseInt(isNaN(input)) || input.length != 8) {
+            alert('제대로 입력 안해?')
+            location.reload();
+        } else {
+            if (parseInt(input) === 12345678) {
+                document.write('ASCENDING');
+            } if (parseInt(input) === 87654321) {
+                document.write('DESCENDING');
+            } if (parseInt(input) != 12345678 && parseInt(input) != 87654321) {
+                document.write('MIXED');
+            }
+        }
+
+    </script>
+</head>
+</div>
+
+<body>
+</body>
+
+</html>

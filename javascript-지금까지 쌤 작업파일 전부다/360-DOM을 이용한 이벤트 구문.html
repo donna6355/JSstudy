@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>360-DOM을 이용한 이벤트 구문</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>
+            브라우저는 HTML 코드를 해석해서 <br />
+            계층화된 Tree 형태의 구조화된 Node들을 가지고 있는 DOM을 생성한다.
+        </h1>
+
+        <h2>
+            DOM의 역할 - HTML 소스코드에 접근하여 내용을 가져오거나, 변경하기 위한 통로(인터페이스) 역할
+        </h2>
+
+        <button id="cfm" type="button">확인</button>
+
+        <p><img src="./images/dom_tree.jpg" alt="#"></p>
+    </div>
+
+    <script>
+        const $cfm = document.getElementById('cfm');
+
+        $cfm.addEventListener('click', function () {
+            alert('클릭이벤트 구문 작성 성공~!');
+        });
+    </script>
+</body>
+
+</html>

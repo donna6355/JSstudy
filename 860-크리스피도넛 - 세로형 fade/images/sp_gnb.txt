@@ -1,0 +1,89 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-gnb_menu01 {
+    width: 55px;
+    height: 16px;
+    background-position: -10px -10px;
+}
+
+.sprite-gnb_menu01_on {
+    width: 58px;
+    height: 26px;
+    background-position: -10px -46px;
+}
+
+.sprite-gnb_menu02 {
+    width: 60px;
+    height: 16px;
+    background-position: -10px -92px;
+}
+
+.sprite-gnb_menu02_on {
+    width: 61px;
+    height: 26px;
+    background-position: -10px -128px;
+}
+
+.sprite-gnb_menu03 {
+    width: 137px;
+    height: 16px;
+    background-position: -10px -174px;
+}
+
+.sprite-gnb_menu03_on {
+    width: 137px;
+    height: 26px;
+    background-position: -10px -210px;
+}
+
+.sprite-gnb_menu04 {
+    width: 61px;
+    height: 15px;
+    background-position: -10px -256px;
+}
+
+.sprite-gnb_menu04_on {
+    width: 62px;
+    height: 25px;
+    background-position: -10px -291px;
+}
+
+.sprite-gnb_menu05 {
+    width: 62px;
+    height: 16px;
+    background-position: -10px -336px;
+}
+
+.sprite-gnb_menu05_on {
+    width: 64px;
+    height: 26px;
+    background-position: -10px -372px;
+}
+
+.sprite-gnb_menu06 {
+    width: 66px;
+    height: 16px;
+    background-position: -10px -418px;
+}
+
+.sprite-gnb_menu06_on {
+    width: 68px;
+    height: 26px;
+    background-position: -10px -454px;
+}
+
+.sprite-gnb_menu07 {
+    width: 74px;
+    height: 16px;
+    background-position: -10px -500px;
+}
+
+.sprite-gnb_menu07_on {
+    width: 74px;
+    height: 26px;
+    background-position: -10px -536px;
+}

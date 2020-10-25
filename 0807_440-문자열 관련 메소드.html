@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>440-문자열 관련 메소드</title>
+    <script>
+        //문자열은 읽기전용 배열과 같다.
+        let name = '김수한무거북이와두리미삼천갑자동방삭워리워리세브리코';
+
+        name[0] = '최';
+
+        console.log(name[0]);
+        console.log(name[1]);
+        console.log(name[2]);
+
+
+        //문자열을 지정된 인덱스 구간만큼만 가져올때 사용하는 .slice(시작,끝);**끝 인덱스 불포
+
+        //김수한무거북이와두르미
+        let str = name.slice(0, 11);
+        console.log(str);
+
+        //삼천갑자~ 끝까지
+        let str2 = name.slice(11);
+        console.log(str2);
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

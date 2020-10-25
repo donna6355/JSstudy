@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>논리형변수</title> 
+    <script>
+        //사용자로부터 입력받는 함수 prompt()
+        let myWeight = prompt("당신의 몸무게를 입력해주세요",100);
+        
+        let moonWeight = myWeight * 0.17;
+        // let moonWeight = Number(myWeight) * 0.17;
+
+        document.write("당신의 몸무게는 달에서" + (moonWeight.toFixed(2)) + "kg 입니다.");
+
+        console.log("달에서 당신의 몸무게는 10kg을 넘을까요? " + (moonWeight>10));
+    </script>   
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>210-객체와 메소드와 함수</title>
+    <script>
+        //시험점수(총점, 평균)를 출력하는 프로그램
+        // 일반변수, 함수 이용
+        let kor = parseInt(prompt("국어점수"));
+        let eng = parseInt(prompt("영어점수"));
+        let math = parseInt(prompt("수학점수"));
+        let total = 0;
+        let avg = 0;
+        //총점 함수
+        let totalFn = function () {
+            return kor + eng + math;
+        }
+        //평균 함수
+        let avgFn = function (tot) {
+            return tot / 3;
+        }
+        total = totalFn();
+        avg = avgFn(total);
+
+
+        //시험점수 통지서 출력 함수
+        let printFn = function () {
+            document.write("나의 시험 총점 : " + total + "점 <br />평균 : " + avg + "<br />");
+        }
+
+        printFn();
+
+        //객체 변수와 메소드를 활용하는 방식
+        /*자바스크립트의 객체는 서로 연관있는 데이터와 바로 그 데이터를 처리하는 메소드를 가질 수 있다.*/
+        let iu_score = {
+            name: '아이유', kor: 90, math: 95, eng: 85,
+            totalFn: function () {
+                return this.kor + this.math + this.eng;
+            },
+            avgFn: function (tot) {
+                return tot / 3;
+            },
+            printFn: function () {
+                let total = this.totalFn();
+                console.log('이름 : ' + this.name);
+                console.log('총점 : ' + this.totalFn());
+                console.log('평균 : ' + this.avgFn(total));
+            }
+        };
+        iu_score.printFn();
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

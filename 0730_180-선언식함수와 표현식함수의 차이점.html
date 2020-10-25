@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //선언식 함수 호출
+        sum(100, 200);
+
+
+        //선언식 함수 정의
+        function sum(a, b) {
+            console.log(a + b);
+        }
+
+        //표현식 함수는 호이스팅이 불가능, 반드시 선언을 먼저
+        //표현식 함수 호출
+        mul(100, 200);
+
+        //표현식 함수 정의
+        let mul = function () { }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

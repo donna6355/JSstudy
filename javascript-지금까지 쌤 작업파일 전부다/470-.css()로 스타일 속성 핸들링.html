@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>470-.css()로 스타일 속성 핸들링</title>
+    <link rel="stylesheet" href="./../web/css/reset.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+
+            //방법1) h1요소의 글자색을 빨간색으로 변환
+            $("h1").css("color", "red");
+
+
+            //방법2) h1요소의 글자크기를 20px, 자간을 5px로 변환
+            $("h1").css("font-size", "20px");
+            $("h1").css("letter-spacing", "5px");
+
+            //메소드체인 방식
+            $("h1").css("font-size", "20px")
+                .css("letter-spacing", "5px");
+
+
+            //방법3) h1요소에 1px의 검정테두리, 배경이미지설정, 가운데정렬 설정
+
+            $("h1").css({
+                textAlign: "center",
+                backgroundImage: "url(./images/big2.jpg)",
+                border: "1px solid black"
+            });
+
+
+            //방법4) img요소의 display 속성값을 출력하세요.
+            let result = $("img").css("display");
+
+            alert("result = " + result);
+            console.log("result = " + result);
+            console.log("result = ", result);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            .css() API를 이용한 스타일적용
+        </h1>
+        <p style="text-align: center;">
+            <img src="./images/big1.jpg" alt="#">
+        </p>
+    </div>
+</body>
+
+</html>

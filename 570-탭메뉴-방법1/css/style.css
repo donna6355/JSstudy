@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+#wrap {
+	width: 427px;
+	margin: 0 auto;
+}
+
+section {
+	position: relative;
+	height: 450px;
+	padding-top: 5px;
+	border: 1px solid black;
+}
+section > .gnb {
+	width: 270px;
+	margin: 15px 0 0 20px;
+}
+section > .gnb > li {
+	float: left;
+}
+section > .gnb > li:nth-child(odd) {
+	width: 50px;
+}
+section > .gnb > li:nth-child(even) {
+	width: 60px;
+}
+section > .gnb > li > a {
+	font-weight: 800;
+}
+section > .gnb > .on > a {
+	color: blue;
+}
+
+section > article {
+	display: none;
+	position: absolute;
+	left: 20px;
+	top: 50px;
+	width: 387px;
+	height: 400px;
+	text-indent: -9999px;
+}
+section > article:nth-child(2) {
+	display: block;
+	background-image: url(../images/news.png);
+}
+section > article:nth-child(3) {
+	background-image: url(../images/sports.png);
+}
+section > article:nth-child(4) {
+	background-image: url(../images/entertainment.png);
+}
+section > article:nth-child(5) {
+	background-image: url(../images/life.png);
+}
+section > article:nth-child(6) {
+	background-image: url(../images/tv.png);
+}

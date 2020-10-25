@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>입력받은 모든 수를 양수로 출력하기</title>
+    <style>
+        #wrap {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>입력받은 모든 수를 양수로 출력</h1>
+        <h2>입력받은 수 : <span class="input">?</span></h2>
+        <h2>출력된 수 : <span class="output">?</span></h2>
+        <button type="button">입력받기</button>
+    </div>
+    <script>
+        const $btn = document.querySelector('button');
+        const $input = document.querySelector('.input');
+        const $output = document.querySelector('.output');
+
+        //수 입력
+        $btn.addEventListener('click', function () {
+            let inValue = parseInt(prompt('정수를 입력하세요!'));
+            console.log(typeof (inValue));
+            // if (inValue < 0) {
+            //     outValue = inValue * -1
+            // } else { outValue = inValue }
+            // //window 출력
+            // $input.textContent = inValue;
+            // $input.style.color = 'blue';
+            // $output.textContent = outValue;
+            // $output.style.backgroundColor = 'yellow';
+
+
+            if (isNaN(inValue)) {
+                alert('잘못 입력하셨습니다.');
+                location.reload();
+            } else {
+                //수 변환
+                if (inValue < 0) {
+                    outValue = inValue * -1
+                } else { outValue = inValue }
+                //window 출력
+                $input.textContent = inValue;
+                $input.style.color = 'blue';
+                $output.textContent = outValue;
+                $output.style.backgroundColor = 'yellow';
+
+            }
+
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

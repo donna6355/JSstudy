@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>데이터교환</title> 
+    <script>
+        /*
+            문제)
+            변수 두개의 값을 서로 맞바꾸는 문제입니다.
+
+            각각 100, 200을 저장하고 있는 변수 num1, num2가 있습니다.
+
+            콘솔창에 아래와 같이 출력되는 코드를 작성하세요.
+
+            교환전 : num1=100, num2=200
+            교환후 : num1=200, num2=100
+        */
+
+        let num1 = 500;
+        let num2 = 8000;
+        
+        console.log("교환전 : num1="+num1+", num2="+num2);
+        
+        let tmpVar = num1;
+
+        num1 = num2;
+
+        num2 = tmpVar;
+        
+        console.log("%c교환후 : num1="+num1+", num2="+num2,"color:blue;font-size:16px;");
+
+    </script>   
+</head>
+<body>
+    
+</body>
+</html>

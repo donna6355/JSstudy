@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Borealis</title>
+  <style>
+    body {
+      margin: 0 auto;
+      background-image: url(./images/aurora1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #bear {
+      width: 900px;
+      margin: 400px auto 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .button {
+      position: absolute;
+      left: center;
+      top: 10px;
+    }
+
+    .button>span {
+      color: #fff;
+      font-weight: 900;
+      cursor: pointer;
+    }
+  </style>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script>
+    $(function () {
+      let num = 0;
+      setInterval(function () {
+        if (num === 19) {
+          num = 18;
+        } else {
+          num++;
+        }
+        $('#bear>img').attr({ src: './images/' + num + '.png' });
+      }, 400);
+    })
+  </script>
+</head>
+
+<body>
+  <div id="bear"><img src="./images/0.png" alt="PolarBear">
+  </div>
+  <!-- <div class="button">
+    <span class="play">▶</span>
+    <span class="stop">■</span>
+  </div> -->
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Space Clicker</title>
+    <script>
+
+        let clicks = 0;
+
+        function onClick() {
+            clicks += 1;
+            document.getElementById("clicks").textContent = clicks;
+        };
+    </script>
+</head>
+
+<body>
+
+
+    <button type="button" onClick="onClick()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+
+    <h1>Array 값 정렬하기</h1>
+    <p>Array 안에는 <span style="color:blueviolet;font-weight:800;" class="txt">?</span>가 들어있다.</p>
+    <button onClick="myFn()" type="button">click</button>
+    <script>
+        let array = ['저녁에 ', '무엇을 ', '먹으면 ', '좋을까 ', '?'];
+        console.log(array.length)
+        let clickCount = 0;
+        const $txt = document.querySelector('.txt');
+        let myFn = function () {
+            if (clickCount === 0) {
+                document.querySelector('.txt').textContent = array[clickCount];
+                clickCount++;
+                return;
+            } if (clickCount > 0 && clickCount < array.length) {
+                document.querySelector('.txt').textContent += array[clickCount];
+                clickCount++;
+                return;
+            } if (clickCount === array.length) {
+                alert('저녁 메뉴 골라주세요!');
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

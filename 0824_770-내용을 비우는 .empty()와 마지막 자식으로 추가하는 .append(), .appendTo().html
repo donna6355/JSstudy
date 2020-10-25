@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>770-.empty() .append(), .appendTo()</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('button').on('click', function () {
+                $('p').empty();//요소의 내용을 비운다.
+                $('address').remove();//요소 자체가 지워진다.
+
+                $('ol,ul').append('<ll>개발자 존레식</li>');
+                $('ol').append('<li>동적기능의 추가</li>');
+                $('ol').append('<li>목록을 나타내는 태그</li>');
+
+                $('<li>CSS방식의 셀렉팅</li>').appendTo('ul');
+                $('<li>정말 쉽고 같편한 제이쿼리</li>').appendTo('ul');
+                $('<li>여러가지 기능의 다양한 API 제공</li>').appendTo('ul,ol')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>내부삽입 메소드 .append(), appendTo()</h1>
+
+        <div>
+
+            <h2>제이쿼리의 역할</h2>
+            <ol></ol>
+
+            <hr />
+
+            <h2>제이쿼리의 장점</h2>
+            <ul></ul>
+        </div>
+
+        <p style="color:red;">크로스 <span>브라우징</span></p>
+        <address>서울시 강서구 화곡동<span>12345</span></address>
+
+        <button>삭제</button>
+    </div>
+</body>
+
+</html>

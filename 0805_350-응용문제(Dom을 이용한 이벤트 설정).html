@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>350-응용문제(Dom을 이용한 이벤트 설정)</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>현재값 = <span id="value">0</span></h1>
+
+        <button id="plus">만약 현재값이 5보다 작다면 1증가</button>
+        <button id="minus">만약 현재값이 0보다 크다면 1감소</button>
+    </div>
+    <script>
+        const $value = document.getElementById('value');
+        const $plus = document.getElementById('plus');
+        const $minus = document.getElementById('minus');
+        let num = 0;
+        $value.textContent = num;
+
+        let plusFn = function () {
+            if (num < 5) { num++; };
+            $value.textContent = num;
+        };
+
+        let minusFn = function () {
+            if (num > 0) { num--; };
+            $value.textContent = num;
+        };
+        $plus.addEventListener('click', plusFn);
+        $minus.addEventListener('click', minusFn);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+#wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+header {
+}
+header > nav {
+	overflow: hidden;
+	position: relative;
+	height: 73px; /* =38+35 */
+}
+
+/* 메인메뉴 */
+#gnb {
+	display: flex;
+}
+
+#gnb > li {
+	width: 20%;
+	border: 1px solid #000;
+	border-right-width: 0;
+	box-sizing: border-box;
+}
+
+#gnb > li:last-child {
+	border-right-width: 1px;
+}
+
+#gnb > li > a {
+	display: block;
+	position: relative;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+
+#gnb > li:hover > a {
+	font-weight: 800;
+	background-color: #efe4b0;
+}
+
+#gnb > li > a:after {
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	margin-left: -3px;
+	border-width: 6px;
+	border-style: solid;
+	border-color: transparent transparent #076f99 transparent;
+	content: '';
+}
+
+#gnb > li:hover > a:after {
+	display: block;
+}
+
+#gnb .lnb {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 38px;
+	width: 100%;
+	*zoom: 1;
+}
+
+#gnb .lnb:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+#gnb .lnb > li {
+	float: left;
+	margin-right: 15px;
+}
+
+#gnb .lnb > li:last-child {
+	margin-right: 0;
+}
+
+#gnb .lnb > li > a {
+	display: block;
+	height: 35px;
+	color: #195a91;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 35px;
+}
+
+#gnb .lnb_1 {
+	padding-left: 78px;
+}
+#gnb .lnb_2 {
+	padding-left: 178px;
+}
+#gnb .lnb_3 {
+	padding-left: 350px;
+}
+#gnb .lnb_4 {
+	padding-left: 560px;
+}
+#gnb .lnb_5 {
+	padding-left: 660px;
+}
+
+section {
+	height: 350px;
+	line-height: 350px;
+	text-align: center;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}

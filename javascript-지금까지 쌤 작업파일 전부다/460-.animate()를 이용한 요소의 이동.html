@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>460-.animate()를 이용한 요소의 이동</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            line-height: 100px;
+            text-align: center;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 15px;
+            border: 1px solid #f00;
+        }
+
+        .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #0f0;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script>
+        //DOMConentLoaded
+        $(function () {
+
+            //이징 치트시트
+            //http://haiyang.me/easing/Easings.html
+
+            //버튼에 대한 click 이벤트 등록
+            $("button").click(function (evt) {
+
+                //duration은 0.4초(400) 기본값
+                //.animate({JSON옵션},시간,"속도",콜백함수)
+
+                //.box 요소의 left 값을 바꾼다.
+                $(".box")
+
+                    .animate({ left: 700 }, 2000, "easeInOutBounce", function () {
+                        alert("오른쪽 끝 도착~!");
+                    })
+
+                    .animate({ left: 0 }, 5000, "easeInOutCubic", function () {
+                        alert("처음 위치로 도착~!");
+                    });
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>박스 애니메이트</h1>
+        <section>
+            <p class="box">박스</p>
+        </section>
+        <button type="button">실행</button>
+    </div>
+</body>
+
+</html>

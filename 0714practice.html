@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        let site = prompt("Among google, naver, nate, and daum., which website do you often use?","");
+        let url;
+
+        switch(site){
+            case "google" : url = "google.com";
+            break;
+            case "naver" : url = "naver.com";
+            break;
+            case "nate" : url = "nate.com";
+            break;
+            case " daum" : url = "daum.net";
+            break;
+
+            default: alert("incorrect answer");
+        }
+
+        if(url) location.href = "http://www." + url;
+        
+
+        let num = 1;
+        while(num <= 10){
+            if(num%2 == 0){
+                document.write("<p class='blue'>짝수 " + num + "</p>","<br />");
+            }else{
+                document.write("<p class='red'>홀수 " + num + "</p>","<br />");
+            }
+            num++;
+        }
+
+
+        for(let month = 1; month <= 12; month++){
+            if(month>=4 && month<=6){
+                document.write("<p class='red'> 꽃이 피는 봄, " + month + "월 </p><br />")
+            }else if(month>=7 && month<=9){
+                document.write("<p class='blue'> 수영하고 싶은 여름, " + month + "월 </p><br />")
+            }else if(month>=10 && month <=12){
+                document.write("<p class='brown'> 수확을 거두는 가을, " + month + "월 </p><br />")
+            }else{
+                document.write("<p class='snow'> 군고구마가 먹고싶은 겨울, " + month + "월 </p><br />")
+            }
+        }
+
+        for(let digit = 1000;digit >=10;digit--){
+            if(digit%100 === 0){
+                document.write("<p class='red'>100의 배수 " + digit +"</p><br />");
+            }else if(digit%33 === 0 ){
+                document.write("<p class='brown'>33의 배수 " + digit + "</p><br />");
+            }else{
+                continue;
+            }
+        }
+        document.write("==============The End================")
+
+
+    </script>
+    <style>
+        .blue{color:lightskyblue;}
+        .red{color:lightcoral;}
+        .brown{color:burlywood;}
+        .snow{color:aquamarine}
+    </style>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+
+#wrap{width:708px;margin:0 auto}
+h1{line-height:100px;font-size:35px;text-align:center}
+
+/* 포토, 전체목록 */
+section>.photoviewer{height:40px;*zoom:1}
+section>.photoviewer:after{display:block;clear:both;content:''}
+section>.photoviewer>span{display:block;float:left;width:25px;height:11px;margin:15px 0 0 10px;text-indent:-9999px;background-image:url(../images/photo.gif);}
+section>.photoviewer>a{display:block;float:right;width:58px;height:21px;margin:5px 10px 0 0;text-indent:-9999px;background-image:url(../images/totlist.gif)}
+
+/* 상단 페이지네이션 - 텍스트 처리 */
+#slides{overflow:hidden;position:relative;width:708px;height:650px;;border:1px solid #C7C8C9;box-sizing:border-box;}
+
+#slides>.slides-topbg{height:117px;background-color:#FAFAFA}
+#slides>.slides-topbg>.page{padding-top:10px;*zoom:1}/* 패딩을 준 이유는 마진통합현상 발생 때문 */
+#slides>.slides-topbg>.page:after{display:block;clear:both;content:'';*zoom:1}
+#slides>.slides-topbg>.page>span{float:left;width:100px;height:25;margin-left:50px;line-height:25px;;}
+#slides>.slides-topbg>.page>span>strong{color:blue;font-weight:800;}		
+#slides>.slides-topbg>.page>a{float:right;display:block;width:37px;height:25px;text-indent:-9999px;background-image:url(../images/title_list.gif)}
+#slides>.slides-topbg>.page>a.orderlist{margin-right:5px;background-position:-145px 9px}
+#slides>.slides-topbg>.page>a.recomlist{margin-right:50px;background-position:-47px -16px}
+
+/* 상단 페이지네이션 - 썸네일 처리 */
+#slides>.slides-topbg>.slides-pagination{width:614px;height:57px;margin:5px auto 0px;*zoom:1}
+#slides>.slides-topbg>.slides-pagination:after{display:block;clear:both;content:'';}		
+#slides>.slides-topbg>.slides-pagination>li{float:left;width:68px;height:57px;margin-right:10px;background-repeat:no-repeat;border:3px solid #dedede;box-sizing:border-box}
+
+#slides>.slides-topbg>.slides-pagination>li:hover,
+#slides>.slides-topbg>.slides-pagination>li.on{border-color:#444BF6}
+
+#slides>.slides-topbg>.slides-pagination>li:nth-child(1){background-image:url(../images/th1.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(2){background-image:url(../images/th2.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(3){background-image:url(../images/th3.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(4){background-image:url(../images/th4.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(5){background-image:url(../images/th5.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(6){background-image:url(../images/th6.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(7){background-image:url(../images/th7.jpg)}
+#slides>.slides-topbg>.slides-pagination>li:nth-child(8){margin-right:0;background-image:url(../images/th8.jpg)}
+#slides>.slides-topbg>.slides-pagination>li>a{display:block;width:68px;height:57px;text-indent:-9999px}
+
+/* 이전, 다음 버튼 */		#slides>.slides-navigation{position:absolute;top:47px;width:20px;height:34px;text-indent:-9999px;background-image:url(../images/arrow.gif);}
+#slides>.slides-previous{left:15px;}
+#slides>.slides-next{right:15px;background-position:20px 0;}
+
+/* 스틸컷 슬라이드 */
+#slides>.slides-container{position:absolute;left:0;top:116px;;width:5664px;height:385px;*zoom:1}
+#slides>.slides-container:after{display:block;clear:both;content:''}		#slides>.slides-container>li{float:left;width:708px;height:385px;background-repeat:no-repeat;background-size:cover}
+#slides>.slides-container>li:nth-child(1){background-image:url(../images/big1.jpg);}
+#slides>.slides-container>li:nth-child(2){background-image:url(../images/big2.jpg);}
+#slides>.slides-container>li:nth-child(3){background-image:url(../images/big3.jpg);}
+#slides>.slides-container>li:nth-child(4){background-image:url(../images/big4.jpg);}
+#slides>.slides-container>li:nth-child(5){background-image:url(../images/big5.jpg);}
+#slides>.slides-container>li:nth-child(6){background-image:url(../images/big6.jpg);}
+#slides>.slides-container>li:nth-child(7){background-image:url(../images/big7.jpg);}
+#slides>.slides-container>li:nth-child(8){background-image:url(../images/big8.jpg);}
+#slides>.slides-container>li>a{display:block;width:708px;height:385px;text-indent:-9999px;}
+
+/*시작 중지 버튼*/
+.slides-container~span{
+   display:block;
+   position:absolute;
+   top:476px;
+   width:20px;
+   height:20px;
+   text-indent:-9999px;
+   background-repeat:no-repeat;
+   cursor:pointer;
+}
+
+/*
+   E~F : E요소와 형제이면서 E다음에 나오는 모든 F요소
+*/
+
+
+.play{
+   right:35px;
+   background-image:url(../images/play.png);
+}
+
+.pause{
+   right:10px;
+   background-image:url(../images/pause.png);
+}
+
+/* 추천/원본/댓글 */
+#slides>.etc{position:absolute;top:540px;left:230px;width:238px;*zoom:1}
+#slides>.etc:after{display:block;clear:both;content:'';}
+#slides>.etc>a{float:left;width:76px;height:50px;margin-right:5px;text-indent:-9999px;background-repeat:no-repeat;}
+#slides>.etc>a.comment{height:52px;margin-right:0;background-image:url(../images/comment.gif);}		
+#slides>.etc>a.recom{color:#fff;font-size:15px;font-weight:800;text-indent:0;line-height:65px;text-align:center;background-image:url(../images/recom.gif);}
+#slides>.etc>a.see{color:#000;font-size:10px;text-indent:0;line-height:65px;text-align:center;background-image:url(../images/see.gif);}
+
+
+/* 관련키워드 */
+#slides>.ad{position:relative;height:30px;margin-top:503px;border-top:1px solid #dedede;box-shadow:0 1px 1px #706952;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+#slides>.ad>.keyword{position:absolute;top:0px;width:68px;height:30px;margin:11px 10px 0 15px;text-indent:-9999px;background-image:url(../images/keyword.gif);background-repeat:no-repeat;}
+#slides>.ad>a{position:absolute;left:100px;top:8px;color:#6880FA;font-weight:600;}
+#slides>.ad>a:hover{text-decoration:underline;}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>620-setInterval(콜백함수,시간)</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function () {
+            let intervalId = null;
+            $('.start').on('click', function () {
+                intervalId = setInterval(function () {
+                    let now = new Date;
+                    $('.time').text(now);
+                }, 1000)
+            })
+
+            $('.stop').on('click', function () {
+                clearInterval(intervalId);
+            })
+
+        })
+    </script>
+</head>
+
+<body style="text-align:center;">
+    <div id="wrap">
+        <h1 class="text-center">
+            일정시간 간격으로 코드를 반복하고 싶으면<br />
+            setInterval (콜백함수,시간)
+        </h1>
+        <p class="time">?</p>
+        <p>
+            <button class="start" type="button">시작</button>
+            <button class="stop" type="button">중지</button>
+        </p>
+    </div>
+</body>
+
+
+</html>

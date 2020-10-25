@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>480-.text()와 .index() 를 이용한 인덱스번호 추출</title>
+    <link rel="stylesheet" href="./../web/css/reset.css">
+    <style>
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        ol>li {
+            height: 50px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        ol>li:nth-child(odd) {
+            background-color: pink;
+        }
+
+        ol>li:nth-child(even) {
+            background-color: #dedede;
+        }
+
+        p {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        p>span {
+            color: #f00;
+            font-size: 30px;
+        }
+
+        hr {
+            display: block;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+
+            const $dramaTit = $(".drama>li");
+
+            //이벤트 등록
+            $dramaTit.click(function () {
+
+                //1. 이번에 클릭한 요소의 텍스트 내용을 가져온다.
+                let title = $(this).text();
+
+                //2. 가져온 내용에 "~을(를) 시청했습니다."로 추가변경(재할당)
+                title += "을(를) 시청했습니다.";
+                // console.log(title);
+
+                //3. 바뀐 title 변수의 내용을 이번에 클릭한 요소에 텍스트로 삽입
+                $(this).text(title);
+
+                //4. 현재 선택된 li요소의 인덱스 번호 출력
+
+                //아래 방식은 친형제 관계일때만 효과가 있다.
+                //사촌 이상의 관계에서는 효과가 없음
+                let nowIdx = $(this).index();
+
+
+                $('.drama+p>span').text(nowIdx);
+            });
+        });
+
+        //ready가 의미하는게 바로 DOMContentLoaded 
+        $(document).ready(function () {
+
+            const $method = $(".jquery>li>a");
+
+            //이벤트 등록
+            $method.click(function (evt) {
+                evt.preventDefault();
+
+                //1. 이번에 클릭한 요소의 텍스트 내용을 가져온다.
+                let title = $(this).text();
+
+                //2. 가져온 내용에 "~을(를) 클릭했습니다."로 title 값 변경
+                //버카충 => 제목 = 원래제목 + 추가한내용
+                title += "을(를) 클릭했습니다.";
+
+                //3. 바뀐 title 변수의 내용을 이번에 클릭한 요소에 텍스트로 삽입
+                $(this).text(title);
+
+                //4. 현재 선택된 li>a요소의 인덱스 번호 출력
+                //다섯개의 요소중 this에 해당하는 요소의 인덱스
+                //이 방식은 친형제 뿐만 아니라,
+                //사촌관계에서도 100% 효과가 있음(만능)
+                let nowIdx = $method.index(this);
+                $(".jquery+p>span").text(nowIdx);
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">click 이벤트로 보는 최근 인기 드라마</h1>
+
+        <ol class="drama">
+            <li>한번 다녀왔습니다.</li>
+            <li>이태원클래스</li>
+            <li>쌍갑포차</li>
+            <li>미생</li>
+            <li>가짜사나이</li>
+        </ol>
+
+        <p>현재 선택된 li의 index = <span>?</span></p>
+
+        <hr />
+
+
+        <h2 class="text-center">제이쿼리 메소드의 분류</h2>
+
+        <ol class="jquery">
+            <li>
+                <a href="#">셀렉팅 메소드</a>
+            </li>
+
+            <li><a href="#">이벤트 메소드</a></li>
+
+            <li><a href="#">내용조작 메소드</a></li>
+
+            <li><a href="#">이펙트/효과 메소드</a></li>
+        </ol>
+
+        <p>현재 선택된 li>a의 index = <span>?</span></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>710-hasClass( )는 true 또는 flase를 리턴</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        p {
+            width: 336px;
+            margin: 0 auto;
+        }
+
+        p>span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+
+        p>span.on {
+            background-color: pink;
+            border: none;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            /*.hasClass()는 선택된 요소가 지정한 클래스를 가지고 있으면 true를, 가지고 있지 않으면 false를 return*/
+            $('span').on('click', function () {
+                //on클래스를 가지고 있으면 제거, 없으면 on 추가
+                if ($(this).hasClass('on')) {
+                    $(this).removeClass('on')
+                } else { $(this).addClass('on') }
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">.hasClass() - 특정 클래스가 있냐? 없냐?</h1>
+        <p>
+            <span class="on">박스-1</span>
+            <span>박스-2</span>
+            <span>박스-3</span>
+        </p>
+    </div>
+</body>
+
+</html>

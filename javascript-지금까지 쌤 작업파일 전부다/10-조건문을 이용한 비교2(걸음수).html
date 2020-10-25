@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>10-조건문을 이용한 비교2(걸음수)</title>
+    <script>
+        let step = prompt("오늘 얼마나 걸으셨어요?");
+        
+        if(step>=20000){
+            document.write("오늘은 2만보 이상 걸으셨네요");
+        }
+
+        if(step>=10000 && step<20000){
+            document.write("오늘은 1만보 이상 걸으셨네요");
+        }
+/*
+문제) 걸음수가 20000보 이상이면 
+     "오늘은 2만보 이상 걸으셨네요" 라고 출력되고,
+
+걸음수가 10000보 이상, 20000보 미만이면 
+     "오늘은 1만보 이상 걸으셨네요" 라고 출력되도록 
+
+코드를 변형해 보세요
+*/        
+
+/*
+        score 변수에 점수를 입력받고,
+        만약 100점이면 콘솔창에 "1등급"을 출력하고, 
+        100점이 아니면 "1등급 아님"을 출력        
+*/
+
+        let score = prompt("점수를 입력하세요");
+
+        score = Number(score);
+
+        if(score === 100){
+            console.log("1등급");
+        }
+
+        if(score !== 100){
+            console.log("1등급 아님");
+        }
+
+    </script>     
+</head>
+<body>
+    
+</body>
+</html>

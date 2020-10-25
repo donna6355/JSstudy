@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>670-.children()-직계자식 셀렉팅</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('button').on('click', function () {
+                $('p>span').css({ borderBottom: '3px double red' })
+                $('p').children().css({ borderBottomColor: 'blue' })
+                $('p').children('.uxui').css({ color: 'blue' })
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>텍스트를 빼놓고 직계자식 셀렉팅 - children() 메소드</h1>
+        <p>코로나 땜에 걱정도 많고 덥기도 하지만,
+            <span class="uxui">우리 같이 이겨내봐요~!</span>
+        </p>
+        <ol>
+            <li><span class="blue">즐거운 자바스크립트 시간입니다.</span></li>
+            <li>어때요?</li>
+            <li>생각보다 쉽지요?</li>
+        </ol>
+        <p>이렇게 열심히 하다보면 어느 순간엔가 <span>유능한 퍼블리셔</span>가 되어 있을 거에요</p>
+        <button type="button">클릭~!</button>
+    </div>
+</body>
+
+</html>

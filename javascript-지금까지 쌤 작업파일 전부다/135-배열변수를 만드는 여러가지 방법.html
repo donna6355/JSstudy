@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>135-배열변수를 만드는 여러가지 방법</title>
+    <script>
+        //1. 빈배열 변수 선언후 데이터 입력
+        let city = [];
+
+        city[0] = '서울';
+        city[1] = '인천';
+        city[2] = '세종';
+
+
+        //2. Array()를 이용한 배열 생성
+        let hobby = new Array();
+        //let hobby = []; 같은 결과
+
+        hobby[0] = 'HTML';
+        hobby[1] = 'CSS';
+        hobby[2] = 'Javascript';
+
+        console.log(hobby);
+
+
+        //3. Array(값...)를 이용한 배열 생성
+        let nameArr = new Array('홍길동', '이순신', '신사임당');
+        console.log(nameArr);
+
+        //for문을 이용한 배열출력
+        for (let i = 0; i < nameArr.length; i++) {
+            document.write("<br />" + nameArr[i]);
+        }
+
+        //for~in문을 이용한 배열출력(어드밴스 for문)
+        for (let idx in nameArr) {
+            console.log(nameArr[idx]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

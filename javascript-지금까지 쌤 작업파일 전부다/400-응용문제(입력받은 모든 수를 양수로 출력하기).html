@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>입력받은 모든 수를 양수로 출력하기</title>
+    <style>
+        #wrap {
+            text-align: center;
+        }
+    </style>
+    <script>
+        //DOMContentLoaded : DOM-Tree 구성이 완료되었을 때 
+        document.addEventListener('DOMContentLoaded', function () {
+
+            /*
+                정수를 입력받는다
+                    버튼을 누르면 prompt창이 뜬다.
+                        버튼 DOM 선택
+                        이벤트구문
+                        prompt()으로 입력
+
+                입력받은 수를 파란글씨로 화면에 출력한다.
+                
+                입력받은 수가 음수라면 양수로 변환한다.
+
+
+                변환한 수를 노란배경색으로 화면에 출력한다.
+            */
+
+            //DOM 선택
+            const $btn = document.querySelector('button');
+            const $input = document.querySelector('.input');
+            const $output = document.querySelector('.output');
+
+
+            //click 이벤트 등록
+            $btn.addEventListener('click', function () {
+                let num = parseInt(prompt('정수를 입력하세요'));
+
+                //입력받은 수 출력
+                $input.textContent = num;
+                $input.style.color = 'blue';
+
+
+                //양수변환-1
+                if (num < 0) {
+                    num *= -1;
+                }
+
+                //양수변환-2
+                num = Math.abs(num);
+
+                //양수변환-3
+                num = (num > 0) ? num : -num;
+
+
+                //변환된 수 출력
+                $output.textContent = num;
+                $output.style.backgroundColor = "yellow";
+                $btn.style.padding = "5px";
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>입력받은 모든 수를 양수로 출력</h1>
+        <h2>입력받은 수 : <span class="input">?</span></h2>
+        <h2>출력된 수 : <span class="output">?</span></h2>
+        <button type="button">입력받기</button>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

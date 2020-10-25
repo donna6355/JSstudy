@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Array Method</title>
+</head>
+
+<body>
+    <h1>
+        filter, map, sort, reduce, every, some, find, findindex
+    </h1>
+
+    <script>
+        // 1. Array.filter() : creat a new array w/ all elements that pass the test
+        const character = ['Pooh', 'Piglet', 'Tigger', 'Eeyore', 'Simba'];
+
+        const result = character.filter(word => word.length > 4);
+
+        console.log(`the result of .filter() is ${result}`);
+
+        // 2. Array.map() : creat a new array populated with the results of calling a provided function on every element in the calling array
+        const numArr = [3, 2, 7, 1, 19]
+        //pass a function to map
+        const numTrpArr = numArr.map(num => num * 3)
+        console.log(`the result of .map() is ${numTrpArr}`)
+
+        // 3. Array.sort() : sorts the elements of an array in place and return **.reverse()
+        const months = ['Dec', 'Aug', 'Sep', 'Apr', 'May']
+        months.sort();
+        console.log(`the result of .sort() is ${months}`)
+
+        // 4. Array.reduce() :  executes a reducer function (that you provide) on each element of the array, resulting in single output value ( reduce elements of the array into one return value by executing reducer function)
+
+        const numArray = [6, 3, 2, 8, 1, 0]
+        const reducer = (accumulator, currentVal) => { return accumulator + currentVal }
+        console.log(`the result of .sort() is ${numArray.reduce(reducer)}`);
+
+        // 5. Array.every() : tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+        const test = (val) => val > 40
+        const numberArr = [50, 60, 70, 93]
+        console.log(`the result of .every() is ${numberArr.every(test)}`)
+
+        // 6. Array.some() : tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+        const divide = [3, 7, 11, 33, 4]
+        const divideFn = (num) => num % 2 === 0
+        console.log(`the result of .some() is ${divide.some(divideFn)}`)
+
+        // 7. Array.find() : returns the value of the first element in the provided array that satisfies the provided testing function
+
+        const fruits = ['apple', 'banana', 'orange', 'pineapple', 'dragonfruits', 'mango', 'straberry']
+        console.log(`the result of .find() is ${fruits.find((fruit) => fruit.length > 6)}`)
+
+        // 8. Array.findIndex() : returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
+
+        console.log(`the result of .findIndex() is ${fruits.findIndex(fruit => fruit.length > 6)}`)
+    </script>
+</body>
+
+</html>

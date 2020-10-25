@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>560-.show(),.hide() </title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style type="text/css">
+        #wrap {
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            height: 100px;
+            line-height: 100px;
+        }
+
+        p {
+            display: none;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid red;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('.frst').click(function () {
+                $('p').show(2000)
+            })
+            $('.last').click(function () {
+                $('p').hide(2000)
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>.show( ), .hide( ) 메소드</h1>
+
+        <p>쉽고 재미있는 제이쿼리 라이브러리 사용법</p>
+
+        <div>
+            <button class="frst">show</button>
+            <button class="last">hide</button>
+        </div>
+    </div>
+</body>
+
+</html>

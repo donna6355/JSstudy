@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>490-this-Current HTML Element</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //h1요소를 클릭하면 img가 width:50px border:1px solid black을 갖도록 .css() json방식으로 작성
+            $('h1').click(function () {
+                $('img').css({
+                    width: 50,
+                    border: '1px solid black'
+                })
+            })
+
+            //img요소를 클릭하면 이번에 클릭한 요소의 src 속성값을 window.alert() 으로 출력하세요.
+            $('img').click(function (evt) {
+                //this = evt.currentTarget = Current HTML Element
+                let imgSrc = $(this).attr('src');//방법1
+                imgSrc = $(evt.currentTarget).attr('src');//방법2
+                window.alert(imgSrc);
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">this 이해하기</h1>
+        <p style="text-align:center;">
+            <img src="./images/run_1.gif" alt="#">
+            <img src="./images/run_2.gif" alt="#">
+            <img src="./images/run_3.gif" alt="#">
+            <img src="./images/run_4.gif" alt="#">
+            <img src="./images/run_5.gif" alt="#">
+            <img src="./images/run_6.gif" alt="#">
+            <img src="./images/run_7.gif" alt="#">
+            <img src="./images/run_8.gif" alt="#">
+            <img src="./images/run_9.gif" alt="#">
+            <img src="./images/run_10.gif" alt="#">
+        </p>
+    </div>
+</body>
+
+</html>

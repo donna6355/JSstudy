@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>260-내장객체 기본형-Object()</title>
+    <script>
+        /*문제 - 객체변수 myCar의 속성으로 brand, name, color, door를 갖도록 언하고, 각각의 속성값을 콘솔창에 출력하는 코드를 작성하세요.*/
+        //객체를 생성하는 원형 생성자함수를 이용한 객체변수 myCar
+        let myCar = new Object(); //현재 빈 객체
+        myCar.brand = 'BMW'; //동적으로 brand 속성 생성
+        myCar.name = 'M4';
+        myCar.color = 'Blue';
+        myCar.door = 4;
+        myCar.info = function () {
+            console.log('***내 차 정보***');
+            console.log('브랜드 :' + this.brand);
+            console.log('차명 :' + this.name);
+            console.log('색상 :' + this.color);
+            console.log('도어수 :' + this.door);
+        };
+
+        //myCar 객체 정보 출력
+        myCar.info();
+
+
+
+
+
+        //literal style object
+        /*        let myCar = {
+                    brand: 'BMW'
+                }
+        */
+
+        //생성자함수 형식의 객체변수
+        /*        function Car(brand) {
+                    this.brand = brand;
+                }
+                let myCar = new Car('BMW');
+        */
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

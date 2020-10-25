@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>130-배열(하나의 변수에 여러개의 값을 저장)</title>
+    <script>
+        //일반변수를 통한 데이터 저장
+        let jan = '1월';
+        let feb = '2월';
+        let mar = '3월';
+        let apr = '4월';
+        let may = '5월';
+        let jun = '6월';
+        let jul = '7월';
+        let aug = '8월';
+        let sep = '9월';
+        let oct = '10월';
+        let nov = '11월';
+        let dec = '12월';
+
+        //배열변수를 통한 데이터 저장
+        let monthArr = ['1월', '2월', '3월', '4월'];
+        console.log("monthArr = ", monthArr);
+
+        document.write("<br />monthArr[0] = " + monthArr[0]);
+        document.write("<br />monthArr[1] = " + monthArr[1]);
+        document.write("<br />monthArr[2] = " + monthArr[2]);
+        document.write("<br />monthArr[3] = " + monthArr[3]);
+
+        //배열의 끝에 데이터를 추가하는 .push()
+        monthArr.push('5월');
+
+        monthArr[5] = '6월';
+        monthArr[6] = '7월';
+        monthArr[7] = '8월';
+
+        console.log(monthArr);
+
+
+        //배열의 길이를 알려주는 .length
+        document.write("<br />monthArr 배열의 크기는 " + monthArr.length);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

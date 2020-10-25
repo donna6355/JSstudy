@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>280-동등 연산자와 일치연산자</title>
+</head>
+
+<body>
+    <h1>두 값의 비교</h1>
+    <ul>
+        <li>== 동등연산자</li>
+        <li>=== 일치연산자</li>
+    </ul>
+
+    <script>
+        let a = 100;
+        let b = '100';
+
+        //동등연산자 == 로 값 비교
+        console.log(a == b);//true
+
+        //일치연산자 === 로 값 비교
+        console.log(a === b);//false
+
+        //동등연산자 == 로 직접 두값 비교
+        console.log(100 == '100');//true
+
+        //일치연산자 === 로 직접 두값 비교
+        console.log(100 === '100');//false
+
+        //콘솔창에 쌍따옴표를 포함한 문자열 출력
+        //예를들어 "홍길동"
+        console.log('"홍길동"');
+
+        //콘솔창에 홑따옴표를 포함한 문자열 출력
+        //예를들어 '둘리'       
+        console.log("'둘리'");
+    </script>
+</body>
+
+</html>

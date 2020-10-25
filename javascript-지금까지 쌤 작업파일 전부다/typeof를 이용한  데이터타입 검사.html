@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>typeof를 이용한  데이터타입 검사</title>    
+    <script>
+        let age = 27;
+        const temperature = 38.5;
+
+        console.log(typeof(age));//number
+        console.log(typeof(temperature));//number
+
+        let id = "mvcweb";
+        let blankStr = "";
+
+        console.log(typeof(id));//string
+        console.log(typeof(blankStr));//string
+
+
+        const boolTrue = true;
+        const boolFalse = false;
+        
+        console.log(typeof(boolTrue));//boolean
+        console.log(typeof(boolFalse));//boolean
+
+
+        const nullVar = null;
+        console.log(typeof(nullVar));//object
+
+
+        let undefinedVar;
+        console.log(typeof(undefinedVar));//undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

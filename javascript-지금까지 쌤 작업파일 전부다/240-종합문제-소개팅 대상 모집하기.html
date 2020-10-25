@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>240-종합문제-소개팅 대상 모집하기</title>
+    <script>
+        /*
+                소개팅 대상을 모집하려 하는데 이때 대상을 선별하는 프로그램을 구현하려고 합니다. 
+        
+                질문1) 당신의 성별은?
+                    만약 남자이면 "소개팅 모집대상이 아닙니다~! 다음기회에 지원해 주세요~!"라고 알람창 출력
+        
+                    
+                질문2) 당신의 나이는?
+                    만약 20<=나이<30 범위에 속하지 않으면 "정말 죄송하지만 20대 여성을 모집중니다."라고 알람창 출력
+        
+                질문3) 소개팅 대상입니다. 지원하시겠습니까?
+                    confirm을 이용해서 답변값을 저장
+        
+                    만약 답변이 긍정적이면 "금요일 6:30분까지 화곡역 7번출구 앞 롯데리아에서 만나요~!"라고 body 출력
+        
+                    부정답변이면 "다음에 꼭 지원해주세요~!"라고 body 출력
+             */
+
+
+        let fnSex = function (sex) {
+            if (sex === "남자") {
+                alert("소개팅 모집대상이 아닙니다. 다음기회에 지원해주세요")
+            }
+
+        };
+        let usersex = prompt("당신의 성별은?");
+        fnSex(usersex);
+
+        let fnAge = function (age) {
+            if (age >= 20 && age < 30) {
+
+            } else {
+                alert("죄송하지만 20대 여성을 모집중입니다.")
+            }
+        };
+        let userage = prompt("당신의 나이는?");
+        fnAge(userage);
+
+
+        let fnConfirm = function (confirm) {
+            if (confirm == true) {
+                document.write("금요일 6:30분까지 화곡역 7번출구 앞 롯데리아에서 만나요")
+            } else {
+                document.write("다음에 꼭 지원해주세요")
+            }
+        }
+        let userconfirm = confirm("소개팅 대상입니다. 지원하시겠습니까?")
+        fnConfirm(userconfirm);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>510-.addClass()와 .removeClass()로 클래스 추가삭제</title>
+    <style>
+        .fafa {
+            color: green;
+            letter-spacing: 5px;
+        }
+
+        .fs {
+            font-style: italic;
+        }
+
+        .c {
+            color: blue;
+        }
+
+        .fz {
+            font-size: 50px;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //문제1) h1요소를 클릭했을 때 .c 클래스를 추가하세요.
+            $('h1').click(function () {
+                $(this).addClass('c');
+            });//end of h1.click
+
+            //문제2) 아이디가 king인 요소 클릭했을 때 .fs 클래스를 추가하세요
+            $('#king').click(function (evt) {
+                $(evt.currentTarget).addClass('fs');
+            });//end of #king.click
+
+            //문제3) 클래스명이 queen인 요소 클릭했을 때 .c .fz 클래스를 추가하세요
+            $('.queen').click(function () {
+                $(this).addClass('c fz');
+            });//end of .queen.click          
+
+            //문제4) h1+button 요소를 클릭했을 때 h1요소의 .c 클래스를 삭제하는 코드를 작성하세요.
+            $('h1+button').click(function () {
+                $('h1').removeClass('c');
+            });//end of h1+button.click
+
+            //문제5) h2+button을 클릭하면 h1,h2,h3 요소의 .fafa 클래스가 삭제되는 코드를 작성하세요.
+            $('h2+button').click(function () {
+                $('h1,h2,h3').removeClass('fafa');
+            });//end of h2+button.click
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1 class="fafa">
+        헤드라인-1
+    </h1>
+    <button type="button">.c 삭제</button>
+
+    <h2 id="king" class="fafa">
+        헤드라인-2
+    </h2>
+    <button type="button">.fafa 삭제</button>
+
+    <h3 class="queen fafa">헤드라인-3</h3>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+h1 {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+.slides {
+	position: relative;
+	width: 1280px;
+	height: 426px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+/* 슬라이드 컨테이너 */
+.slides > .slides-container > li {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	*zoom: 1;
+}
+
+.slides > .slides-container > li:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.slides > .slides-container > li > .item {
+	float: left;
+	width: 330px; /*실제 410px*/
+	height: 426px;
+	padding: 0 40px;
+	background-color: #f3f3f3;
+}
+
+.slides > .slides-container > li > .item > a > strong:before {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 16px;
+	content: 'NEWS';
+}
+
+.slides > .slides-container > li > .item > a > strong {
+	display: block;
+	margin-top: 24%;
+	color: #000;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.slides > .slides-container > li > .item > a:last-child {
+	display: inline-block;
+	margin-top: 60px;
+	color: #333;
+	font-weight: 800;
+	font-size: 13px;
+}
+
+.slides > .slides-container > li > .frame {
+	float: left;
+	display: block;
+	overflow: hidden;
+	width: 870px;
+	height: 426px;
+}
+
+.slides > .slides-container > li > .frame > img {
+	display: block;
+	width: 100%;
+}
+
+/* 슬라이드 페이지네이션 */
+.slides > .slides-pagination {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	width: 242px;
+	height: 18px;
+	margin-left: -121px;
+}
+
+.slides > .slides-pagination > li {
+	float: left;
+	width: 18px;
+	margin-right: 10px;
+	background-image: url(../images/bul.png);
+	background-repeat: no-repeat;
+}
+
+.slides > .slides-pagination > li:last-child {
+	margin-right: 0;
+}
+
+.slides > .slides-pagination > li.on {
+	background-position: 0 -18px;
+}
+
+.slides > .slides-pagination > li > a {
+	display: block;
+	height: 18px;
+	text-indent: -9999px;
+}
+
+/* 이전, 다음버튼 */
+.slides > .slides-navigation {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+}
+
+.slides > .slides-navigation:hover {
+	background-color: #dedede;
+}
+
+.slides > .slides-prev {
+	left: 0;
+}
+
+.slides > .slides-prev > span {
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 10px 0 0 5px;
+	text-indent: -9999px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent #000 transparent transparent;
+}
+
+.slides > .slides-next {
+	left: 40px;
+}
+
+.slides > .slides-next > span {
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 10px 0 0 15px;
+	text-indent: -9999px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent transparent #000;
+}
+
+/* 자동재생 버튼 */
+.slides > .slides-btn {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	margin-left: 135px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background-image: url(../images/icons.png);
+	background-position: -62px -24px;
+	background-repeat: no-repeat;
+}
+.slides > .slides-btn.pause {
+	background-position: 0 -57px;
+}
+
+address {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>760-이전, 다음에 있는 형제 요소 셀렉팅 prev(), prevAll(), next(), nextAll()</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header>h1 {
+            height: 100px;
+            line-height: 100px;
+        }
+
+        section>ol {
+            width: 634px;
+            margin: 30px auto;
+            *zoom: 1
+        }
+
+        section>ol:after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        section>ol>li {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+            line-height: 80px;
+            border: 1px solid black;
+        }
+
+        section>ol>li:last-child {
+            margin-right: 0;
+        }
+
+        .deco_1 {
+            background-color: #FF0;
+            border-color: red
+        }
+
+        .deco_2 {
+            background-color: #f0f;
+            border-color: blue
+        }
+
+        .font {
+            font-size: 20px;
+            text-decoration: underline;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            const $btn = $('button');
+            const $me = $('.me');
+
+            //1.첫번째 버튼을 클릭하면 $me요소 이전에 위치한 형제요소에 대하여 글자색을 빨간색으로 바꾸시오
+            $btn.first().on('click', function () {
+                $me.prev().css('color', 'red')
+            })
+
+            //2.두번째 버튼을 클릭하면 $me요소 이후에 위치한 형제요소에 대하여 글자색을 파란색으로 바꾸시오
+            $btn.eq(1).on('click', function () {
+                $me.next().css('color', 'blue')
+            })
+
+            //3. 세번째 버튼을 클릭하면 $me 요소이전에 위치한 모든 형제요소에 대하여 .deco_1 클래스를 추가하세요.
+
+            //3-1. $me 요소 이전에 위치한 형제요소중 first클래스를 가지고 있는 요소에게 .font 클래스를 추가하세요.
+            $btn.eq(2).on('click', function () {
+                $me.prevAll().addClass('deco_1');
+                $me.prevAll('.first').addClass('font');
+
+            })
+
+
+            //4. 마지막 버튼을 클릭하면 $me 요소이후에 위치한 모든 형제요소에 대하여 .deco_2 클래스를 추가하고, $me 요소 이후에 위치한 형제요소중 second 클래스를 가지고 있는 요소에게 .font 클래스를 추가하세요.
+            $btn.last().on('click', function () {
+                $me.nextAll().addClass('deco_2')
+                    .nextAll('.second').addClass('font')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>.prev(), .prevAll()과 .next(), .nextAll( )</h1>
+        </header>
+        <section>
+            <ol>
+                <li>이전형제</li>
+                <li class="first">이전형제</li>
+                <li>이전형제</li>
+                <li class="me">주인공</li>
+                <li>다음형제</li>
+                <li class="second">다음형제</li>
+                <li>다음형제</li>
+            </ol>
+            <button type="button">.prev()</button>
+            <button type="button">.next()</button>
+            <button type="button">.prevAll()</button>
+            <button type="button">.nextAll()</button>
+        </section>
+    </div>
+</body>
+
+</html>

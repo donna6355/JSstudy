@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        p {
+            text-align: center
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            let num = 0;
+            let intervalId = null;
+
+            $('.plus').on('click', function () {
+                clearInterval(intervalId);
+                num = parseInt($('.num').text()) + 1;
+                $('.num').text(num);
+                intervalId = setInterval(function () {
+                    num = parseInt($('.num').text()) + 1;
+                    $('.num').text(num);
+                }, 1000)
+            });
+            $('.minus').on('click', function () {
+                clearInterval(intervalId);
+                num = parseInt($('.num').text()) - 1;
+                $('.num').text(num);
+                intervalId = setInterval(function () {
+                    num = parseInt($('.num').text()) - 1;
+                    $('.num').text(num);
+                }, 1000)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            1초마다 1씩 증감 <span class="num">100</span>
+        </h1>
+        <p>
+            <button type="button" class="plus">증가</button>
+            <button type="button" class="minus">감소</button>
+        </p>
+    </div>
+</body>
+
+</html>

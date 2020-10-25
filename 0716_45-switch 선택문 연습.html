@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>45-switch 선택문 연습</title>
+    <script>
+        let site = prompt("Among Naver, Daum, and Google, which is your favorite site?")
+        let url;
+
+        switch(site){
+            case "Naver" : url = "www.naver.com";
+                break;
+            case "Daum" : url = "www.daum.net";
+                break;
+            case "Google" : url = "www.google.ca";
+                break;
+            default : alert("Incorrect answer");
+        }
+        location.href = "http://" + url;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

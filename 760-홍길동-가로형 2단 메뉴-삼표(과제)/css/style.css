@@ -1,0 +1,228 @@
+@charset "utf-8";
+#wrap * {
+	font-family: 'nanumgothic';
+}
+body:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	min-width: 940px;
+	height: 40px;
+	background-color: #ccc;
+	content: "";
+}
+body:after {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	min-width: 940px;
+	height: 60px;
+	background-color: #009ddf;
+	content: "";
+}
+
+header {
+	position: relative;
+	width: 940px;
+	height: 150px;
+	margin: 0 auto;
+}
+header > h1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0 auto;
+}
+header > h1 > a {
+	display: block;
+	width: 140px;
+	height: 100px;
+	text-indent: -9999px;
+	background-image: url(../images/logo.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+header > nav {
+	overflow: hidden;
+	position: absolute;
+	left: 140px;
+	top: 40px;
+	width: 800px;
+	height: 110px;
+}
+header > nav > .gnb {
+}
+header > nav > .gnb > li {
+	float: left;
+	width: 160px;
+	font-size: 16px;
+	font-weight: 800;
+	text-align: center;
+}
+header > nav > .gnb > li > a {
+	display: block;
+	height: 60px;
+	color: #fff;
+	line-height: 60px;
+}
+header > nav > .gnb > li:hover > a {
+	position: relative;
+	color: #333;
+	background-color: #fff;
+}
+header > nav > .gnb > li:hover > a:after {
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 64px;
+	margin-left: -32px;
+	height: 5px;
+	background-color: #009ddf;
+	text-indent: -9999px;
+	content: "삼표소개";
+}
+header > nav > .gnb > li:nth-child(3):hover > a:after {
+	width: 96px;
+	margin-left: -48px;
+}
+
+header > nav > .gnb .lnb {
+	display: none;
+	width: 800px;
+	*zoom: 1;
+}
+.lnb:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+header > nav > .gnb .lnb_1 {
+	margin-left: 43px;
+}
+header > nav > .gnb .lnb_2 {
+	margin-left: -90px;
+}
+header > nav > .gnb .lnb_3 {
+	margin-left: -65px;
+}
+header > nav > .gnb .lnb_4 {
+	margin-left: -100px;
+}
+header > nav > .gnb .lnb_5 {
+	margin-left: -225px;
+}
+header > nav > .gnb .lnb > li {
+	float: left;
+	font-size: 14px;
+}
+header > nav > .gnb .lnb > li > a {
+	color: #777;
+	height: 50px;
+	padding: 0 12px;
+	line-height: 50px;
+}
+
+section {
+	overflow: hidden;
+	position: relative;
+	width: 940px;
+	height: 485px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #dedede;
+}
+section > .bnr {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	width: 2820px;
+}
+section > .bnr > li {
+	width: 940px;
+}
+section > .bnr > li > a {
+	display: block;
+	height: 485px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+}
+section > .bnr > li:nth-child(1) > a {
+	background-image: url(../images/mainbnr_1.jpg);
+}
+section > .bnr > li:nth-child(2) > a {
+	background-image: url(../images/mainbnr_2.jpg);
+}
+section > .bnr > li:nth-child(3) > a {
+	background-image: url(../images/mainbnr_3.jpg);
+}
+
+section > .btn {
+	display: flex;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	height: 12px;
+}
+section > .btn > li {
+	width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	background-image: url(../images/btn.png);
+	background-position: -18px 0;
+	cursor: pointer;
+}
+section > .btn > li.on,
+section > .btn > li:hover {
+	background-position: 0 0;
+}
+
+section > .auto {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 12px;
+	height: 12px;
+	text-indent: -9999px;
+	background-image: url(../images/play.png);
+}
+
+section > .prev {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 42px;
+	height: 42px;
+	margin-top: -21px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-image: url(../images/prev.png);
+}
+section > .next {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 42px;
+	height: 42px;
+	margin-top: -21px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-image: url(../images/next.png);
+}
+
+footer > address {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}

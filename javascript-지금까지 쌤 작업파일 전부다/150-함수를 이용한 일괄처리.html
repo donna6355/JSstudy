@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>150-함수를 이용한 일괄처리</title>
+    <script>
+        //두수의 사칙연산 결과를 출력
+        var num_1 = 200;
+        var num_2 = 100;
+        console.log("num_1 + num_2 = ", num_1 + num_2);
+        console.log("num_1 - num_2 = ", num_1 - num_2);
+        console.log("num_1 * num_2 = ", num_1 * num_2);
+        console.log("num_1 / num_2 = ", num_1 / num_2);
+        console.log("---------------------------------");
+
+        //매개변수를 가진 함수의 선언과 호출
+        function operation(num_1, num_2) {
+            console.log("num_1 + num_2 = ", num_1 + num_2);
+            console.log("num_1 - num_2 = ", num_1 - num_2);
+            console.log("num_1 * num_2 = ", num_1 * num_2);
+            console.log("num_1 / num_2 = ", num_1 / num_2);
+            console.log("---------------------------------");
+        }
+
+        //함수호출
+        operation(3000, 2000);
+        operation(500, 200);
+        operation(200, 100);
+
+
+        //커피자판기 판매가격 출력함수
+        function coffeePrice(price) {
+            let tax = 0.1;
+
+            //판매가 = 매입가 + 마진 + 부가세
+            let salePrice = (price + 10 * price) + (price + 10 * price) * tax
+
+            document.write("자판기 판매가는 " + salePrice);
+        }
+
+        coffeePrice(20000);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

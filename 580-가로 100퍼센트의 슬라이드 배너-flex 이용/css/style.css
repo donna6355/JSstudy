@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.moa-slides {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 500px;
+	/* border: 1px solid #000; */
+}
+
+.moa-slides > .moa-slides-container {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 300%;
+}
+
+.moa-slides > .moa-slides-container > p {
+	/* float: left;
+	width: 33.33333%; */
+	width: 100%;
+	height: 500px;
+	text-indent: -9999px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.moa-slides > .moa-slides-container > p:nth-of-type(1) {
+	background-image: url(../images/banner_1.png);
+}
+
+.moa-slides > .moa-slides-container > p:nth-of-type(2) {
+	background-image: url(../images/banner_2.png);
+}
+
+.moa-slides > .moa-slides-container > p:nth-of-type(3) {
+	background-image: url(../images/banner_3.png);
+}
+
+.moa-slides > .moa-slides-indicator {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	width: 74px;
+	margin-left: -37px;
+}
+
+.moa-slides > .moa-slides-indicator > li {
+	float: left;
+	width: 18px;
+	margin-right: 10px;
+	background-image: url(../images/bul.png);
+	background-repeat: no-repeat;
+}
+
+.moa-slides > .moa-slides-indicator > li:last-child {
+	margin-right: 0;
+}
+
+.moa-slides > .moa-slides-indicator > li:hover,
+.moa-slides > .moa-slides-indicator > li.on {
+	background-position: 0 -18px;
+}
+
+.moa-slides > .moa-slides-indicator > li > a {
+	display: block;
+	height: 18px;
+	text-indent: -9999px;
+}
+
+/* 이전 다음 */
+.moa-slides > .moa-slides-navigation {
+	position: absolute;
+	top: 50%;
+
+	display: block;
+	width: 80px;
+	height: 100px;
+	margin-top: -50px;
+	text-indent: -9999px;
+	background-image: url(../images/btn_navigation.png);
+	background-repeat: no-repeat;
+}
+
+.moa-slides > .moa-slides-prev {
+	left: 10px;
+	background-position: -5px -225px;
+}
+
+.moa-slides > .moa-slides-prev:hover {
+	background-position: -5px -335px;
+}
+
+.moa-slides > .moa-slides-next {
+	right: 10px;
+	background-position: -5px -5px;
+}
+
+.moa-slides > .moa-slides-next:hover {
+	background-position: -5px -115px;
+}

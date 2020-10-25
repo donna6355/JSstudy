@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        const id = "toeltmsm";
+        const pw = "toel3173";
+
+        let userId = prompt("Please put your ID");
+
+        if(userId==id){
+            let userPW = prompt("Please put your password","****")
+            if(userPW == pw){
+                document.write("welcome back! " + id);
+            }else{
+                alert("Incorrect Password!");
+                location.reload();
+            }
+        }else{
+            alert("Incorrect ID! Would you like to sign up?");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>680-.find()는 자손을 선택, .filter()는 필터링한 요소를 선택</title>
+    <style>
+        .yellow {
+            background-color: #ff0;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <script>
+            $(function () {
+                //1. header>p태그 중 짝수번째(인덱스기준)에 해당하는 요소에 pink 배경을 적용하는 코드를 작성하세요.
+                $('header>p').filter(':even').css('background-color', 'pink')
+
+                //2. on 클래스를 가지고 있는 p 태그에 요소에 .yellow 클래스를 추가하세요.
+                $('header>p').filter('.on').addClass('yellow')
+            })
+        </script>
+        <header>
+            <h1>.filter()와 .find()</h1>
+            <p>텍스트문단 - 0</p>
+            <p>텍스트문단 - 1</p>
+            <p>텍스트문단 - 2</p>
+            <p class="on">텍스트문단 - 3</p>
+            <p>텍스트문단 - 4</p>
+        </header>
+        <hr />
+        <script>
+            $(function () {
+                /*
+                em요소를 선택하는 방법
+                $('#wrap em') => $('#wrap').find('em')
+                $('dl em') => $('dl').find('em')
+                */
+
+                //1. find() 메소드를 사용하여 dl요소의 자손중 em요소를 선택한 후,해당 요소의 글자색을 빨간색으로 바꾸세요.
+                $('dl').find('em').css({ color: 'red' });
+
+                const $section = $('section');
+                //2. $section 자손 p 요소를 find() 메소드를 이용하는 방식으로 셀렉팅해서 배경색을 핑크로 바꾸세요.
+                $section.find('p').css('background-color', 'pink');
+            })
+        </script>
+        <section>
+            <h2>사전식목록을 나타내는 태그 dl,dt,dd</h2>
+            <dl>
+                <dt>여러 요소중에서</dt>
+                <dd><em>이탤릭 단어의</em> 글자색을</dd>
+                <dd><em>빨간색으로</em> 변경한다.</dd>
+            </dl>
+            <p>.find( ) 메소드는 <em>깊이에 상관없다.</em></p>
+        </section>
+    </div>
+</body>
+
+</html>

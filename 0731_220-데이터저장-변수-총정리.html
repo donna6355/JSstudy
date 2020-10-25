@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>220-데이터저장-변수-총정리</title>
+    <script>
+        /*
+        자바스크립트의 변수타입은 할당되는 값에 따라 동적으로 결정된다.
+        숫자형 Number
+        문자형 String
+        참/거짓형 Boolean
+        객체 Object
+            배열 Array
+            함수 Function
+        */
+
+        //1. 일반변수 pocket을 선언하고 200 값을 할당
+        let pocket = 200; //pocket 변수의 type은 number(숫자형)
+
+        //2. 일반변수 pocket 값을 1500으로 재할당
+        pocket = 1500; //여전히 pocket 변수의 type은 number(숫자형)
+
+        //3. 일반변수 pocket 값을 '오천원'으로 재할당
+        pocket = '오천원'; //pocket 변수의 type은 String(문자열)
+
+        let cash = 2500;
+        pocket = cash; //값(메모리에 저장된 실제 값) 복사
+        pocket = 3800;
+        console.log('현재 pocket = ' + pocket);
+        console.log('현재 cash = ' + cash);
+
+        //4. 주소참조타입의 배열변수를 통한 데이터 저장
+        let days = ['월', '화', '수', '목'];
+        days[4] = '금'; //원소추가
+        days.push('토'); //배열의 맨 마지막에 원소 추가
+
+        days[0] = '월요일'//원소의 값을 수정
+        console.log(days[0]);
+
+        let workDay = days; //주소 참조값 복사 > 두 함수의 값이 모두 변한다.
+        workDay.push('일요일');
+        console.log('workDay = ' + workDay)
+        console.log('days = ' + days)
+
+        //5. 객체변수를 통한 연관있는 데이터 저장
+        //let person = new Object{}; 
+        let person = {
+            name: '홍길동', 'age': 25, id: 'hong', 'home_address': '서울',
+
+            showInfo: function () {
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.id);
+                console.log(this['home_address']);
+            }
+
+        };
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.id);
+        console.log(person['home_address']);
+
+        let info = function () {
+            console.log(person.name);
+            console.log(person.age);
+            console.log(person.id);
+            console.log(person['home_address']);
+        };
+
+        info();
+        for (let i = 0; i < 100; i++) {
+            person.showInfo();
+            console.log(i);
+        };
+
+        let animal = person;
+        animal.name = '손오공';
+        animal.showInfo();
+        person.showInfo();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.slides {
+	overflow: hidden;
+	position: relative;
+	width: 665px;
+	height: 400px;
+	margin: 0 auto;
+	border: 10px solid black;
+}
+.slides > .slides-container {
+	display: flex;
+	flex-flow: row nowrap;
+	position: absolute;
+	left: 0;
+	/* 1번째 슬라이드 : 0 
+    2번째 슬라이드 : -665px
+    3번째 슬라이드 : -1330px
+    4번째 슬라이드 : -1995px  
+  */
+	top: 0;
+	width: calc(665px *4);
+}
+.slides > .slides-container > li {
+	overflow: hidden;
+	width: 665px;
+}
+.slides > .slides-container > li > img {
+	display: block;
+	width: 100%;
+}
+
+.slides > .slides-indicator {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	width: 70px;
+	margin-left: -35px;
+}
+.slides > .slides-indicator > li {
+	width: 13px;
+	background-image: url(../images/pagination.png);
+}
+.slides > .slides-indicator > li.active,
+.slides > .slides-indicator > li:hover {
+	background-position: 0 -26px;
+}
+.slides > .slides-indicator > li > a {
+	display: block;
+	height: 13px;
+	text-indent: -9999px;
+}
+
+.slides > .slides-arrow {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 665px;
+}
+.slides > .slides-arrow > li {
+	background-color: #111;
+	padding: 4px;
+}
+.slides > .slides-arrow > li > a {
+	display: block;
+	color: #fff;
+	font-weight: 800;
+}

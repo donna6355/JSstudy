@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>250-사용자정의 변수 만들기(생성자함수)</title>
+    <script>
+        /*
+            지금까지 우리가 배운 변수
+
+            숫자형 변수
+            문자열 변수
+            불린형 변수
+
+            배열변수
+            함수변수
+            객체변수
+
+
+            사용자정의 (특별한 자료구조를 가진) 변수
+            =>예를들어 숫자형, 문자열, 불린형, 함수변수를 같이 가질 수 있다.
+
+            =>예를들어 누군가의 (나이, 이름, 혼인여부, 신상정보출력)를 가진 사용자정의 변수 => person
+        */
+
+        //생성자함수 선언
+        //왜? 사용자정의 데이터타입을 만들고 싶으니까...
+        //사용자정의 데이터타입 메모리 구조
+        function Person(name, age, wedding) {
+            this.name = name;
+            this.age = age;
+            this.wedding = wedding;
+            this.printInfo = function () {
+                console.log('***신상정보출력***');
+                console.log('이름 : ', this.name);
+                console.log('나이 : ', this.age);
+                console.log('결혼 : ', this.wedding);
+            }
+        }
+
+        //생성자 함수를 이용한 사용자정의 객체변수 생성
+        let hong = new Person('홍길동', 18, false);
+
+        console.log(hong);
+        hong.printInfo();
+
+
+        //-----------------------
+
+        //생성자함수 선언(사용자정의 데이터타입)
+        function Score() {
+            this.kor = 90;
+            this.math = 80;
+            this.eng = 70;
+
+            this.printInfo = function () {
+                console.log("***점수출력***");
+                console.log("국어 : ", this.kor);
+                console.log("수학 : ", this.math);
+                console.log("영어 : ", this.eng);
+            }
+        }
+
+        let kim_score = new Score();
+
+        console.log(kim_score.kor);
+        console.log(kim_score.math);
+        console.log(kim_score.eng);
+
+        kim_score.printInfo();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

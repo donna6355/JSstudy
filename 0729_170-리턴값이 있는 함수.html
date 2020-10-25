@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>170-리턴값이 있는 함수</title>
+    <script>
+        //function 함수명(){} *선언식 함수
+        // let 함수명 = function(){} *익명함수, 표현식 함수
+
+        //문제1) 매개변수 value에 한개의 값을 전달받아, 
+        //그 값을 제곱하여 return 하는 square 함수를 선언하세요.
+
+        // function square(value){
+        //     return value *value
+        // }
+        let square = function (value) {
+            let result = value * value;
+            return result; //값을 반환 - 함수를 호출한 곳으로 값을 돌려준다, 함수 종료 2가지 의미
+            console.log("square 함수 호출")
+        };
+        let val = square(9);
+        console.log("val = " + val);
+
+        //문제2) 두개의 수를 입력받아 합을 리턴하는 함수를 선언하세요. 
+        //함수명은 add, 매개변수 num1,num2
+        let add = function (num1, num2) {
+            let sum = num1 + num2;
+            return sum;
+            console.log("두 수의 합은 " + sum + "입니다. <br />")
+        }
+        let result = add(100, 200);
+        console.log("result =" + result);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

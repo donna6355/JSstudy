@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>370-DOM 셀렉팅 연습</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="tit">세계 여러나라의 인사말</h1>
+        <dl>
+            <dt><strong>토속방언</strong> 버전</dt>
+            <dd class="nation greeting">한국 - 식사하셧습니까? 하모~</dd>
+            <dd class="nation greeting">중국 - 츠팔러마? 츠팔러</dd>
+            <dd class="nation greeting">
+                <strong>부시족</strong> 리얼싸운드 -
+                <strong>일렌트로캉막따따라바오리도? 따따라!</strong>
+            </dd>
+        </dl>
+
+        <hr />
+
+        <h2 id="publisher">웹퍼블리셔로 가는길</h2>
+        <ul id="list">
+            <li class="item">HTML5 & CSS3</li>
+            <li class="item">자바스크립트</li>
+            <li class="item"><em>jQuery</em></li>
+            <li class="item">포토샵/일러스트</li>
+            <li class="item"><em>웹디자인기능사</em></li>
+        </ul>
+    </div>
+    <script>
+        //1. old한 방식
+
+        //1) id를 이용해서 DOM선택
+        //일반변수와 구별하기 위해 변수이름을 $로 시작
+        const $tit = document.getElementById('tit');
+        // console.log($tit);
+
+        //2) class를 이용해서 DOM선택
+        //배열형태로 저장되지만, 배열 그 자체는 아니다.(지구인의 모습을 한 외계인)
+        const $nation = document.getElementsByClassName('nation');
+        //console.log($nation[0]);
+
+        //3) tag를 이용해서 DOM선택
+        //배열형태로 저장되지만, 배열 그 자체는 아니다.(지구인의 모습을 한 외계인)
+        const $li = document.getElementsByTagName('li');
+        //console.log($li[2]);
+
+
+        //2. 개선된 CSS 선택방식
+
+        //1) 하나의 요소만 선택하는 .querySelector()
+        const $publisher = document.querySelector('#publisher');
+        //console.log($publisher);
+
+        const $greeting = document.querySelector('.greeting');
+        // console.log($greeting);
+
+        const $strong = document.querySelector('strong');
+        // console.log($strong);
+
+
+        //2) 여러개의 요소를 배열형태로 선택하는 .querySelectorAll()
+        const $list = document.querySelectorAll('#list');
+        // console.log($list[0]);
+
+        const $item = document.querySelectorAll('.item');
+        // console.log($item[4]);
+
+        const $em = document.querySelectorAll('em');
+        console.log($em[1]);
+
+    </script>
+</body>
+
+</html>

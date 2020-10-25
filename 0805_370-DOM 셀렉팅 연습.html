@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>370-DOM 셀렉팅 연습</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="tit">세계 여러나라의 인사말</h1>
+        <dl>
+            <dt><strong>토속방언</strong> 버전</dt>
+            <dd class="nation greeting">한국 - 식사하셧습니까? 하모~</dd>
+            <dd class="nation greeting">중국 - 츠팔러마? 츠팔러</dd>
+            <dd class="nation greeting">
+                <strong>부시족</strong> 리얼싸운드 -
+                <strong>일렌트로캉막따따라바오리도? 따따라!</strong>
+            </dd>
+        </dl>
+
+        <hr />
+
+        <h2 id="publisher">웹퍼블리셔로 가는길</h2>
+        <ul id="list">
+            <li class="item">HTML5 & CSS3</li>
+            <li class="item">자바스크립트</li>
+            <li class="item"><em>jQuery</em></li>
+            <li class="item">포토샵/일러스트</li>
+            <li class="item"><em>웹디자인기능사</em></li>
+        </ul>
+    </div>
+    <script>
+        //*초창기부터 사용한 구버전으로 id 제외 잘 안 쓰임
+        //id를 이용해서 DOM선택
+        //일반변수와 구분하기 위해서 변수이름을 $로 시작한다. 
+        const $tit = document.getElementById('tit');
+        // console.log($tit);
+
+        //class를 이용해서 DOM선택
+        //배열형태로 저장되지만 배열 그 자체는 아니다. 
+        const $nation = document.getElementsByClassName('nation');
+        // console.log($nation[0]);
+
+        //tag를 이용해서 DOM선택
+        //배열형태로 저장되지만 배열 그 자체는 아니다. 
+        const $li = document.getElementsByTagName('li');
+        // console.log($li[2]);
+
+        //*개선된 CSS 선택방식       
+
+        //하나의 요소만 선택하는 .querySelector()
+        const $publisher = document.querySelector('#publisher');//(div>#publicher)도 가능
+        // console.log($publisher);
+
+        const $greeting = document.querySelector('.greeting');//클래스의 첫번째 요소만 가져온다.
+        // console.log($greeting);
+
+        const $strong = document.querySelector('strong');
+        // console.log($strong);
+
+        //여러개의 요소를 배열형태로 선택하는 .querySelectorAll()
+        const $list = document.querySelectorAll('#list');
+        // console.log($list[0]);
+
+        const $item = document.querySelectorAll('.item');
+        // console.log($item[4]);
+
+        const $em = document.querySelectorAll('em');
+        // console.log($em[0]);
+
+    </script>
+</body>
+
+</html>

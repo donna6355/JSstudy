@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>190-재귀함수</title>
+    <script>
+        /*
+        선언식 함수
+        function myFn(){
+            myFn();
+        }
+        선언식 함수를 정의하면 자바스크립트 엔진이 다음과 같이 변환
+        let myFn = function myFn(){};
+        */
+
+        //표현식 함수 형태 재귀함수
+        //10! = 10*9*8*7*6*5*4*3*2*1
+        let count = 0;
+        let factorialFn = function factorial(n) {
+            count++;
+            console.log("factorialFn 함수 호출됨" + count);
+            if (n <= 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1)
+            }
+        };
+        let result = factorialFn(10); //함수 호출
+        console.log("10! = " + result);
+
+        //선언식 함수 형태 재귀함수
+        let num = 0;
+        function myFn() {
+            num++;
+            document.write(num + "<br />");
+            if (num == 20) return;
+            myFn();//재귀호출
+
+        }
+        myFn();
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let weight = prompt("당신의 몸무게를 입력하세요.");
+        let height = prompt("당신의 키를 입력하세요.");
+        let bmi = weight / (height * height / 10000);
+
+        if(bmi>=23){
+            document.write("과체중입니다.");
+        }else if(bmi<18.5){
+            document.write("저체중입니다.");
+        }else{
+            document.write("정상체중입니다.");
+        }
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

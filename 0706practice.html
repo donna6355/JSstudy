@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    let name = prompt("당신의 이름을 입력해주세요","홍길동");
+    let height = prompt("당신의 신장을 입력해주세요","170");
+    let weight = prompt("당신의 몸무게를 입력해주세요","70");
+
+    let nomWei = (height-100)*0.9;
+    let result = weight <= nomWei+5 && weight >= nomWei-5;
+    result = result? "적정 체중입니다." : "적정 체중이 아닙니다."
+    document.write(name + "님은 " + result + "<br />");
+
+    let price1 = 3000;
+    let price2 = 1000;
+    let price3 = 3000;
+
+    let ttlamount = price1 + price2 + price3;
+    result = ttlamount >= 10000? (ttlamount-10000)+ "원 초과" : "돈 관리 잘 했어요!";
+    document.write("오늘은 " + result);
+    
+
+</script>
+<body>
+</body>
+</html>

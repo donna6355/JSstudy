@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자형데이터를 숫자형데이터로 변환</title>    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+        /*
+            자바스크립트의 데이터 타입
+
+            String(문자형)
+            Number(숫자형)
+            Boolean(논리형)
+            Null
+            undefined
+
+            Object
+                Array
+                Function
+                Reg 정규표현식
+            
+        */
+
+        const age = 100;
+
+        let count = "25";
+
+        //문자숫자 => 진짜숫자로 변환
+        count = Number(count);
+
+        let result = count + 5;//30
+
+        //문자열 255
+        console.log("result = "+result);
+
+        //논리형 변수
+        let fun1 = true;
+        let fun2 = false;
+
+        //문자열 변수
+        let fun3 = "true";
+        let fun4 = "false";
+
+        //Boolean() => true, false 반환
+        //데이터가 참인지 거짓인지 판별함수
+        let result2 = Boolean(fun1)
+        console.log("result2 = "+result2);
+
+        console.log(Boolean(0));//false
+
+        //빈문자열
+        console.log(Boolean(''));//false
+        console.log(Boolean(""));//false
+        
+        //공백문자열
+        console.log(Boolean(' '));//true
+        console.log(Boolean(" "));//true
+
+        console.log(Boolean(null));//false
+        console.log(Boolean(undefined));//fasle
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

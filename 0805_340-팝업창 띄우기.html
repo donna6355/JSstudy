@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>340-팝업창 띄우기</title>
+</head>
+
+<body style="text-align:center;">
+    <div id="wrap">
+        <h1>새로운 팝업창 띄우기</h1>
+        <p>
+            <button id="opn" type="button">팝업창 열기</button><br /><br />
+            <button id="cls" type="button">팝업창 닫기</button><br /><br />
+        </p>
+    </div>
+    <script>
+        const $btnOpen = document.getElementById('opn');
+        const $btnClose = document.getElementById('cls');
+        //null : 현재 값을 알 수 없다. 
+        //이 변수는 팝업창을 컨트롤 할 수있는 참조값을 저장
+        let winGongi = null;
+
+        //새 창을 여는 함수
+        const fnOpen = function () {
+            // alert('새창함수');
+            const opt = 'left=100,top=100,width=500,height=500';
+
+            // window.open('URL','새창이름','옵션');**window 생략가능
+            winGongi = window.open('0805_345-팝업.html', 'pop up', opt);
+        };
+
+        //DOM을 이용한 이벤트 등록
+        //dom변수.addEventListener(이벤트명, 실행코드);
+        $btnOpen.addEventListener('click', fnOpen);
+
+        //팝업창 닫기버튼에 대한 click 이벤트 등록
+        $btnClose.addEventListener('click', function () {
+            winGongi.close();
+        })
+    </script>
+
+
+</body>
+
+</html>

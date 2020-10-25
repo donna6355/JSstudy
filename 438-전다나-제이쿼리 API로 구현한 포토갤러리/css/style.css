@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+#wrap {
+	width: calc(649px + 289px);
+	margin: 0 auto;
+}
+#wrap * {
+	font-family: "roboto";
+}
+header > h1 {
+	height: 100px;
+	color: #555;
+	line-height: 100px;
+	text-align: center;
+}
+section {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: 289px;
+}
+section > .frame {
+	width: 647px;
+	height: 287px;
+	border: 1px solid #ccc;
+}
+section > .frame > a {
+	display: block;
+	overflow: hidden;
+	height: 287px;
+}
+section > .frame > a > img {
+	width: 647px;
+	height: 287px;
+}
+section > .menu {
+	display: flex;
+	flex-flow: row wrap;
+	width: 289px;
+}
+section > .menu > li {
+	width: 95px;
+	border: 1px solid #ccc;
+	border-left: none;
+	border-bottom: none;
+}
+section > .menu > li:nth-child(7),
+section > .menu > li:nth-child(8),
+section > .menu > li:nth-child(9) {
+	border-bottom: 1px solid #ccc;
+}
+section > .menu > li > a {
+	display: block;
+	height: 95px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: -9999px;
+}
+/*
+section > .menu > li:nth-child(1) > a {
+	background-image: url(../images/th1.png);
+}
+section > .menu > li:nth-child(2) > a {
+	background-image: url(../images/th2.png);
+}
+section > .menu > li:nth-child(3) > a {
+	background-image: url(../images/th3.png);
+}
+section > .menu > li:nth-child(4) > a {
+	background-image: url(../images/th4.png);
+}
+section > .menu > li:nth-child(5) > a {
+	background-image: url(../images/th5.png);
+}
+section > .menu > li:nth-child(6) > a {
+	background-image: url(../images/th6.png);
+}
+section > .menu > li:nth-child(7) > a {
+	background-image: url(../images/th7.png);
+}
+section > .menu > li:nth-child(8) > a {
+	background-image: url(../images/th8.png);
+}
+section > .menu > li:nth-child(9) > a {
+	background-image: url(../images/th9.png);
+} */
+/* section > .menu > li:hover > a {
+	background-position: 0 -95px;
+} */

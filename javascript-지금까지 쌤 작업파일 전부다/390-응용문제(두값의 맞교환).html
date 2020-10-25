@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>두 값의 맞교환</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+		}
+
+		p {
+			position: absolute;
+			left: 50%;
+			top: 150px;
+			width: 100px;
+			height: 100px;
+			font-size: 32px;
+			line-height: 100px;
+			text-align: center;
+			border: 1px solid black;
+		}
+
+		p.a {
+			margin-left: -150px;
+			background-color: yellow;
+		}
+
+		p.b {
+			margin-left: 50px;
+			background-color: pink;
+		}
+
+		button {
+			display: block;
+			width: 80px;
+			height: 30px;
+			margin: 200px auto;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>두 값의 맞교환</h1>
+
+	<p class="a">5</p>
+	<p class="b">7</p>
+	<button>맞교환</button>
+
+	<script>
+
+
+		/*
+		변수 2개의 값을 맞바꾸는 문제입니다.
+		각각 5와 7을 저장하고 있는 변수 a, b가 있습니다.
+		아래와 같이 출력되도록 코드를 작성하세요.
+	
+		[출력결과]
+	
+		before :  a=7, b=5
+		after : a=5, b=7
+	
+		*/
+
+		//연습-1 (콘솔창에 출력하기)
+		let a = 7;
+		let b = 5;
+
+		let tmp = a;
+		a = b;
+		b = tmp;
+
+		console.log(a);
+		console.log(b)
+
+
+		//연습-2 (이벤트 구문 적용하기)
+		const $a = document.querySelector('.a');
+		const $b = document.querySelector('.b');
+		const $btn = document.querySelector('button');
+
+		//클릭이벤트 등록
+		$btn.addEventListener('click', function () {
+			//1. 원래값을 가져온다.
+			let a = $a.textContent;
+			let b = $b.textContent;
+
+			//2. 값을 교환한다.
+			let tmp = a;
+			a = b;
+			b = tmp;
+
+			//3. DOM을 조작한다.
+			$a.textContent = a;
+			$b.textContent = b;
+
+
+			//배경색 변경
+			//1. 원래 배경색 가져오기
+			let a_bgc = window.getComputedStyle($a).getPropertyValue('background-color');
+			let b_bgc = window.getComputedStyle($b).getPropertyValue('background-color');
+
+			//2. 배경색을 교환한다.
+			let tmp_bgc = a_bgc;
+			a_bgc = b_bgc;
+			b_bgc = tmp_bgc;
+
+			//3. DOM을 조작한다.
+			$a.style.backgroundColor = a_bgc;
+			$b.style.backgroundColor = b_bgc;
+		});
+
+
+	</script>
+</body>
+
+</html>

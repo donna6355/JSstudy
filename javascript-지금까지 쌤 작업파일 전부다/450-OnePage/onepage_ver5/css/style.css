@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 네비게이션 영역 */
+header {
+	position: fixed;
+	right: 10px;
+	top: 100px;
+	/* border: 1px solid #000; */
+}
+
+header > nav {
+}
+
+header > nav > .gnb {
+}
+
+header > nav > .gnb > li {
+}
+
+header > nav > .gnb > li > a {
+	display: block;
+	padding: 5px 0;
+}
+
+header > nav > .gnb > li > a:hover {
+	background-color: #ff0;
+}
+
+/* 컨텐츠 */
+article {
+	padding: 50px;
+}
+
+.cont0 {
+	/* height: 1000px; */
+	background-color: #ccc;
+}
+
+.cont1 {
+	/* height: 845px; */
+	background-color: #9f9;
+}
+
+.cont2 {
+	/* height: 800px; */
+	background-color: #fc9;
+}
+
+.cont3 {
+	/* height: 600px; */
+	background-color: #990;
+}
+
+.cont4 {
+	/* height: 1000px; */
+	background-color: #6fc;
+}

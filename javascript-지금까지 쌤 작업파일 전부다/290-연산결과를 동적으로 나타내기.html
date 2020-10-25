@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>290-연산결과를 동적으로 나타내기</title>
+</head>
+
+<body>
+    <h1>100 + 200 = <span id="sum">?</span></h1>
+
+    <script>
+        const a = 100;
+        const b = 200;
+
+        const sum = a + b;//300;
+        //console.dir(document.title);
+
+        const $sum = document.getElementById("sum");
+        $sum.innerHTML = "<h1 style='color:red;'>" + sum + "</h1>";
+
+    </script>
+</body>
+
+</html>

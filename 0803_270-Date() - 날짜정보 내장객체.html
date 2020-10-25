@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>270-Date() - 날짜정보 내장객체</title>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>자바스크립트에서 날짜정보 구하기</h1>
+        <ol>
+            <li id="now"></li>
+            <li id="month"></li>
+            <li id="date"></li>
+            <li id="day"></li>
+            <li id="hours"></li>
+            <li id="minutes"></li>
+            <li id="seconds"></li>
+            <li id="time"></li>
+        </ol>
+    </div>
+    <script>
+        //자바스크립트와 DOM **DOM을 먼저 읽어야 됨
+        //js의 역할 : HTML 문서 조작
+        //DOM은 JS가 HTML을 조작할대 필요한 통로
+
+        let now = new Date(); //Date 객체변수 생성
+        let $now = document.getElementById('now'); //$는 DOM변수
+        $now.textContent = now;
+        const $month = document.getElementById('month');
+        $month.textContent = now.getFullYear() + '년' + (now.getMonth() + 1) + '월'; //getMonth는 0 = January부터 시작. +1하기
+        const $date = document.getElementById('date');
+        $date.textContent = now.getDate() + '일';
+        const $day = document.getElementById('day');
+        $day.textContent = now.getDay();
+        document.getElementById('hours').textContent = now.getHours() + '시';
+        document.getElementById('minutes').textContent = now.getMinutes() + '분';
+        document.getElementById('seconds').textContent = now.getSeconds() + '초';
+        //1970년 1월 1일부터 지금까지 경과된 시간을 밀리초 단위로 표시
+        document.getElementById('time').textContent = now.getTime();
+    </script>
+</body>
+
+</html>

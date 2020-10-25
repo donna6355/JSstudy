@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>380-DOM을 이용한 내용변환(setAttribute, setProperty)</title>
+    <style>
+        .deco {
+            text-decoration: underline;
+            background-color: #ff0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>DOM을 이용한 내용변환</h1>
+        <p id="cont" class="deco">자바스크립트를 이용한 내용변환</p>
+        <button type="button">Attribute 변경</button>
+        <button type="button">Property 변경</button>
+    </div>
+
+    <script>
+        
+		//DOM TREE 구성완료후 JS 명령문을 작동하게 하기 위해
+		//body가 끝나기 직전에 자바스크립트 구문을 작성함 
+		
+
+        const $btn = document.querySelectorAll('button');
+        const $cont = document.querySelector('#cont');
+
+        //첫번째 버튼에 대한 클릭이벤트 구문
+        //태그의 속성변경
+        $btn[0].addEventListener('click', function () {
+
+            //"자바스크립트를 이용한 이벤트 처리 완료!"
+            $cont.textContent = "자바스크립트를 이용한 이벤트 처리 완료!";
+
+            $cont.setAttribute('style', 'color:red;')
+            console.log($cont.getAttribute('style'));
+
+            $cont.removeAttribute('class');
+            //가능한 아래의 setAttribute()방식으로 null, '' 빈문자열로 설정하지 말고 removeAttribute() 사용을 권장합니다.
+            // $cont.setAttribute('class', '');
+            // $cont.setAttribute('class', null);
+
+            //특정 attribute를 가지고 있는지 확인
+            console.log($cont.hasAttribute('class'));//false
+        });
+
+        //두번째 버튼에 대한 클릭이벤트 구문
+        //CSS Property 변경
+        $btn[1].addEventListener('click', function () {
+            $cont.style.width = '300px';
+            $cont.style.height = "200px";
+            $cont.style.color = "yellow";
+            $cont.style.lineHeight = "200px";
+            $cont.style.textAlign = "right";
+            $cont.style.backgroundColor = "red";
+
+            //아래의 방법은 잘 쓰이지 않음(위 방법 추천)
+            $cont.style.setProperty('width', '300px');
+            $cont.style.setProperty('height', '100px');
+            $cont.style.setProperty('color', 'blue');
+            $cont.style.setProperty('line-height', '100px');
+            $cont.style.setProperty('text-align', 'center');
+            $cont.style.setProperty('background-color', 'yellow');
+
+            //CSS 속성값 가져오기
+            console.log(window.getComputedStyle($cont).getPropertyValue('width'));
+            console.log(window.getComputedStyle($cont).getPropertyValue("height"));
+            console.log(window.getComputedStyle($cont).getPropertyValue("color"));
+            console.log(window.getComputedStyle($cont).getPropertyValue("line-height"));
+            console.log(window.getComputedStyle($cont).getPropertyValue("text-align"));
+            console.log(window.getComputedStyle($cont).getPropertyValue("background-color"));
+        });
+    </script>
+</body>
+
+</html>

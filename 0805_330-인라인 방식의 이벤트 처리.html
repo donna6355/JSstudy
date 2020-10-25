@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>330-인라인 방식의 이벤트 처리</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            line-height: 100px;
+            text-align: center;
+        }
+
+        p {
+            width: 500px;
+            margin: 0 auto 20px;
+            border: 1px solid black;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>인라인 방식의 이벤트 처리</h1>
+        <p><img onmouseover="msgFn('Kakao Friends')" src="./images/happy.jpg" alt="happy"></p>
+        <button onclick="window.alert('2020년 취업 성공하셨습니다.')" type="button">클릭하면 올해 대박 취업 성공</button>
+    </div>
+    <script>
+        const msgFn = function (msg) {
+            window.alert(msg);
+        }
+        msgFn('Happy New Year');;
+    </script>
+</body>
+
+</html>

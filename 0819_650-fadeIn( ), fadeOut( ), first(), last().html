@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>650-fadeIn( ), fadeOut( ), first(), last()</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        #wrap {
+            text-align: center;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            border: 3px solid blue;
+        }
+
+        .box2 {
+            border: 3px solid red;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('button').first().on('click', function () {
+                $('.box1').fadeOut(3000);
+                //fadeOut은 opacity가 0에 수렴하면서 서서히 사라진다.
+                //lastly turn to display:none;
+            })
+
+            $('button').last().on('click', function () {
+                $('.box1').fadeIn(2000);
+                //opacity value will get closer to 1 and appear.
+                //display:block will be added
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">주변 요소에 영향을 미칠 수 있음</h1>
+        <p class="box1">박스1</p>
+        <p class="box2">박스2</p>
+        <button type="button">사라짐</button>
+        <button type="button">나타남</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>830-족자처럼 사라졌나 나타나는 slideUp(), slideDown()</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        p {
+            width: 500px;
+            height: 300px;
+            background-color: #ff0;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 5px;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('button').first().on('click', function () {
+                $('p').stop().slideUp();
+            })
+            $('.toggle').on('click', function () {
+                $('p').stop().slideToggle();
+            })
+            $('button').last().on('click', function () {
+                $('p').stop().slideDown();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            <button class="up">SlideUp()</button>
+            <button class="toggle">SlideToggle()</button>
+            <button class="down">SlideDown()</button>
+        </h1>
+        <p>box</p>
+    </div>
+</body>
+
+</html>

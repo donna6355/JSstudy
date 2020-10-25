@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>230-함수-총정리</title>
+    <script>
+        /*
+            이름을 입력받아 "당신의 이름은 ㅇㅇㅇ 이군요~!"라는 구문을
+            콘솔창에 출력하는 함수를 작성하여 호출하세요. 함수명은 fnCall, 매개변수명은 name
+        */
+
+        let fnCall = function (name) {
+            console.log('당신의 이름은 ' + name + ' 이군요~!');
+        };
+
+        let username = prompt("이름을 입력해 주세요");
+        fnCall(username)
+
+
+        /*
+            2. 두개의 수를 입력받아 합을 리턴하는 함수를 선언하세요. 함수명은 add, 매개변수는 num1, num2 로 합니다.	리턴된 값을 저장할 변수는 sum 입니다.
+        */
+        let add = function (num1, num2) {
+            return num1 + num2;
+        };
+
+        let sum = add(100, 200)
+        document.write(sum);
+
+        //3. 지역변수와 전역변수의 유효범위(Scope)
+        let global_count = 100;//전역변수(공통변수로 활용)
+
+        //선언식함수
+        function countFn() {
+            let local_count = 1000;//지역변수
+
+            console.log(global_count);
+        };
+
+        countFn();//호출
+
+        //에러발생
+        //console.log(local_count);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

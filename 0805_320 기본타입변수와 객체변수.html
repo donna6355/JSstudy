@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>320-기본타입변수와 객체변수</title>
+    <script>
+        //기본타입 문자열
+        let str = '웹표준';
+        console.log(typeof (str));
+        console.log(str.length);
+
+        //객체타입 문자열
+        let objStr = new String('자바스크립트');
+        console.log(typeof (objStr));
+    </script>
+</head>
+
+<body>
+    <h1>
+        현재 시간은? <span id="hours">?시</span>
+        <span id="minutes">?분</span>
+    </h1>
+    <script>
+        let time = new Date();
+        const $hours = document.getElementById('hours');
+        const $minutes = document.getElementById('minutes');
+        $hours.textContent = time.getHours() + '시';
+        $minutes.textContent = time.getMinutes() + '분';
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+#wrap {
+	width: 706px;
+	margin: 0 auto;
+}
+
+header {
+}
+
+header > nav {
+}
+
+header > nav > ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+header > nav > ul > li {
+	width: 74px;
+	background-size: cover;
+	outline: 1px solid #dedede;
+}
+
+header > nav > ul > li:hover {
+	outline: 1px solid #aaa;
+}
+
+header > nav > ul > li:nth-child(1) {
+	background-image: url(./../images/th1.png);
+}
+
+header > nav > ul > li:nth-child(2) {
+	background-image: url(./../images/th2.png);
+}
+
+header > nav > ul > li:nth-child(3) {
+	background-image: url(./../images/th3.png);
+}
+
+header > nav > ul > li:nth-child(4) {
+	background-image: url(./../images/th4.png);
+}
+
+header > nav > ul > li:nth-child(5) {
+	background-image: url(./../images/th5.png);
+}
+
+header > nav > ul > li:nth-child(6) {
+	background-image: url(./../images/th6.png);
+}
+
+header > nav > ul > li:nth-child(7) {
+	background-image: url(./../images/th7.png);
+}
+
+header > nav > ul > li:nth-child(8) {
+	background-image: url(./../images/th8.png);
+}
+
+header > nav > ul > li:nth-child(9) {
+	background-image: url(./../images/th9.png);
+}
+
+header > nav > ul > li > a {
+	display: block;
+	height: 74px;
+	text-indent: -9999px;
+}
+
+section {
+	margin-top: 5px;
+}
+
+section > p {
+	overflow: hidden;
+	height: 325px;
+	outline: 1px solid #dedede;
+}
+
+section > p > img {
+	display: block;
+	width: 100%;
+}
+
+footer > address {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}

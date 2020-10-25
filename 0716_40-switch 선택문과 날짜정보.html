@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>40-Switch 선택문과 날짜정보</title>
+    <script>
+        //자바스크립트에서 날짜정보 얻어오기
+        let now = new Date();
+
+        //요일만 추출하기
+        let day = now.getDay(); 
+        //0 Sunday 1 Monday 2 Tuesday 3 Wednesday ...6 Saturday
+        
+        //다중 if문을 이용하여 "오늘은 00요일입니다." 출력하기
+
+        if(day === 0){
+            document.write("오늘은 일요일입니다.");
+        }else if(day === 1){
+            document.write("오늘은 월요일입니다.");
+        }else if(day === 2){
+            document.write("오늘은 화요일입니다.");
+        }else if(day === 3){
+            document.write("오늘은 수요일입니다.");
+        }else if(day === 4){
+            document.write("오늘은 목요일입니다.");
+        }else if(day === 5){
+            document.write("오늘은 금요일입니다.");
+        }else{
+            document.write("오늘은 토요일입니다.");
+        }
+        
+///////////////////////////////////////////////////////////
+/*
+let site;
+let site = "";
+코드 작성자의 의도 :변수에 문자열을 저장하겠다.
+let site = 0; 변수에 숫자를 저장하겠다.
+*/
+let site = "";
+switch(day){
+    case 0 :
+        alert("It's Sunday");
+        site = "www.naver.com";
+        break;
+    case 1 : 
+        alert("It's Monday");
+        site = "www.home.com";
+        break;
+    case 2 :
+        alert("It's Tuesday");
+        site = "www.coffee.com";
+        break;
+    case 3 :
+        alert("It's Wednesday");
+        site = "www.daum.net";
+        break;
+    case 4 :
+        alert("It's Thursday");
+        site = "www.nate.com";
+        break;
+    case 5 :
+        alert("It's Friday");
+        site = "www.netflix.com";
+        break;
+    case 6 :
+        alert("It's Saturday");
+        site = "www.trip.com";
+        break;
+    default :
+        alert("What's the day today?")
+        site = "www.google.ca";
+}
+    if(site){
+        location.href = "http://" + site;
+    }
+
+        let dayDay
+        switch(day){
+            case 0 : dayDay = "일";
+            break;
+            case 1 : dayDay = "월";
+            break;
+            case 2 : dayDay = "화";
+            break;
+            case 3 : dayDay = "수";
+            break;
+            case 4 : dayDay = "목";
+            break;
+            case 5 : dayDay = "금";
+            break;
+            case 6 : dayDay = "토";
+            break;
+
+            default : dayDay = "Error"
+        }
+
+        document.write("오늘은 " + dayDay +"요일 입니다.")
+
+    </script>
+</head>
+<body>
+</body>
+</html>

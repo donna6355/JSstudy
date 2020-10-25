@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>310-style 객체를 통한 스타일 효과 적용</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="study">열심히 자바스크립트를 공부합시다.</h1>
+        <p id="show">즐거운 자바스크립트 시간입니다.</p>
+    </div>
+
+    <script>
+        const $study = document.getElementById("study");
+        const $show = document.getElementById("show");
+
+        //1. 참조변수 $study의 style속성을 이용해서 글자색을 파랗게 바꿔보세요.
+        $study.style.color = "blue";
+
+        //2.참조변수 $study의 style속성을 이용해서 글자크기를 10px로 바꿔보세요.
+        $study.style.fontSize = "10px";
+
+        //3. 참조변수 $study의 style속성을 이용해서 굵기를 400으로 바꿔보세요.
+        $study.style.fontWeight = "400";
+
+        //4. 객체변수 $show의 style 속성을 아래와 같이 변경
+        //color:red;font-size:30px;font-weight:800
+        $show.setAttribute('style', 'color:red;font-size:30px;font-weight:800;');
+
+    </script>
+</body>
+
+</html>

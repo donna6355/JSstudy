@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>520-.eq()로 인덱스에 일치 요소 선택.html</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        #wrap {
+            width: 650px;
+            margin: 0 auto;
+        }
+
+        .title {
+            color: #00f;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        li {
+            line-height: 60px;
+        }
+
+        .title {
+            text-decoration: underline;
+        }
+
+        .bgc {
+            background-color: #FF0;
+        }
+
+        .fz {
+            font-size: 20px;
+        }
+
+        .fw {
+            font-weight: 800;
+        }
+
+        .c {
+            color: red;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //문제1) li 요소중 인덱스번호가 2인 요소를 클릭하면 .bgc클래스를 추가
+            $('li').eq(2).click(function () {
+                $(this).addClass('bgc');
+            });
+
+            //문제2) li 요소중 인덱스번호가 3인 요소를 클릭하면 .fz와 .fw .c 클래스를 추가
+            $('li').eq(3).click(function () {
+                $(this).addClass('fz fw c');
+            })
+
+            //문제3) h1요소를 클릭하면 .title 클래스를 제거
+            $('h1').eq(0).click(function () {
+                $(this).removeClass('title');
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="title">역량평가의 원칙</h1>
+        <ol class="color">
+            <li>타당성 - 평가방법, 평가도구, 수집한 증거자료의 적정성</li>
+            <li>공정성 - 대상자의 요구반영, 평가절차안내, 재평가 기회제공, 이의신청 기회 제공</li>
+            <li>신뢰성 - 증거자료를 일관되게 해석, 평가자와 관계없이 동일결과 도출</li>
+            <li>유연성 - 평가 상세정보 제공, 평가방법/시간등 협의기회 제공</li>
+        </ol>
+    </div>
+</body>
+
+</html>

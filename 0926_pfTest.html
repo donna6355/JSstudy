@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pfText</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            overflow: hidden;
+        }
+
+        section {
+            height: 800px;
+            position: relative;
+            background-color: purple;
+        }
+
+        footer {
+            position: relative;
+            height: 100px;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #fff;
+            background-color: #ff00ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section>
+            <span class="drag">You can drag this!</span>
+        </section>
+        <footer>
+            footer
+        </footer>
+    </div>
+    <script>
+        // const $list = $('ul');
+        // const $btn = $('button');
+        // let idx = 1;
+
+        // $btn.on('click', function () {
+        //     $list.animate({ left: (idx * -100 + '%') })
+        //     idx++;
+        // })
+        // let xVal = 0;
+        // $list.on({
+        //     'mousedown': function (evt) {
+        //         let xStart = evt.clientX;
+        //         console.log(xStart)
+        //         let xFin = 0;
+        //         $list.on('mousemove', function (evt) {
+        //             xVal = evt.pageX - xStart;
+        //             console.log(xVal);
+        //             $list.css({ left: xVal })
+        //         })
+        //     },
+        //     'mouseup': function () {
+        //         $list.off('mousemove')
+        //         if (xVal >= 300) {
+        //             $list.animate({ left: (idx * -100 + '%') })
+        //         }
+        //     }
+
+        // })
+        // $(window).on('scroll', function () {
+        //     let scroll = $(window).scrollTop();
+        //     if (scroll >= 1600) {
+        //         $list.stop().animate({ left: (-100 + '%') })
+        //         // alert('e')
+        //     } else if (scroll >= 1000) {
+        //         $list.stop().animate({ left: '-200%' })
+        //         // alert('d')
+        //     } else if (scroll >= 600) {
+        //         $list.show();
+        //         // alert('a')
+        //         $list.stop().animate({ left: '-300%' })
+        //     }
+
+        // })
+        $('.drag').on({
+            // 마우스 클릭시 마우스의 x,y 값을 받아 이동하는 태그의 값으로 할당
+            'mousedown': function () {
+                let xVal = 0;
+                let yVal = 0;
+                // <body /> 안에서 마우스 움직임 추적
+                $('body').on('mousemove', function (evt) {
+                    xVal = evt.clientX;
+                    yVal = evt.clientY;
+                    $('span').css({ left: xVal, top: yVal })
+                })
+            },
+            // 마우스 뗄 경우 마우스 움직임 추적 중지
+            'mouseup': function () {
+                $('body').off('mousemove')
+            }
+        })
+    </script>
+</body>
+
+</html>

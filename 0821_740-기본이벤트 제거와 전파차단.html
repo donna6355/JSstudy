@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>740-기본이벤트 제거와 전파차단</title>
+    <link rel="stylesheet" href="./../Web/css/reset.css">
+    <style>
+        p.box {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+        }
+
+        .box>img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            // 1. 이미지를 클릭하면 "이미지를 클릭했습니다!"라는 알림창이 나오는 코드를 작성하세요.
+            $('img').on('click', function (evt) {
+                alert('이미지를 클릭했습니다!')
+                // evt.preventDefault();
+                // evt.stopPropagation();
+                return false;
+            })
+            //2. .box를 클릭하면 "이미지의 부모가 클릭되었습니다!"라는 알림창이 나오는 코드를 작성하세요.
+            $('.box').on('click', function () {
+                alert('이미지의 부모가 클릭되었습니다.')
+            })
+        })
+        /*
+        evt.preventDefault() - 기본 이벤트 제거
+        evt.stopPropagation() - 상위 요소로의 이벤트 전파 방지
+        return false = preventDefault + stopPropagation
+
+        부모자식간에 같은 이벤트를 동시에 걸었을 때, 자식부터 실행되고 부모가 나중에 실행된다.
+        */
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            .preventDefault()와 .stopPropagation()
+        </h1>
+        <section>
+            <a href="http://www.daum.net/">
+                <p class="box"><img src="./images/run_9.gif" alt=""></p>
+            </a>
+        </section>
+    </div>
+</body>
+
+</html>

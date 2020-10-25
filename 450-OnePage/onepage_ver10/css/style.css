@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.h-fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+header {
+	/* opacity: .5; */
+	position: relative;
+	width: 100%;
+	height: 66px;
+	background-color: #fff;
+	border-bottom: 3px solid #000;
+}
+
+header > h1 {
+	width: 200px;
+}
+
+header > h1 > a {
+	display: block;
+	height: 66px;
+	line-height: 66px;
+	text-align: center;
+}
+
+header > nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: calc(100% - 200px);
+	/* outline: 1px solid red; */
+}
+
+header > nav > .gnb {
+	display: flex;
+}
+
+header > nav > .gnb > li {
+	width: 20%;
+}
+
+header > nav > .gnb > li > a {
+	display: block;
+	height: 66px;
+	line-height: 66px;
+	text-align: center;
+}
+
+header > nav > .gnb > li:hover > a,
+header > nav > .gnb > li.on > a {
+	color: #fff;
+	font-weight: 800;
+	background-color: #1c6b9d;
+}
+
+/* 컨텐츠 */
+section.visual {
+	height: 440px;
+	/* margin-top: 69px; */
+	text-indent: -9999px;
+	background-image: url(../images/visual.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+header + section {
+}
+
+section > article {
+	/* 가세정렬 하려고 아래 3줄 작성 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 150px;
+}
+
+section > .cont0 {
+	height: 1000px;
+}
+
+section > .cont1 {
+	height: 845px;
+}
+
+section > .cont2 {
+	height: 800px;
+}
+
+section > .cont3 {
+	height: 600px;
+}
+
+section > .cont4 {
+	height: 1000px;
+}
+
+footer > address {
+	height: 50px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #3b3b3b;
+}
