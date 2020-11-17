@@ -1,0 +1,29 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+#wrap {
+	width: 100%;
+	height: calc(100vh - ((100vh - 80px) / 2));
+	background-color: #999;
+	margin: 0 auto;
+	padding-top: calc((100vh - 80px) / 2);
+}
+#wrap > button {
+	outline: none;
+	background: none;
+	border: none;
+	display: block;
+	width: 200px;
+	height: 80px;
+	margin: 0 auto;
+	color: #ccc;
+	font-weight: 800;
+	font-size: 20px;
+	font-family: roboto;
+	text-transform: uppercase;
+	border-radius: 40px;
+	border: 2px solid #fff;
+	background-color: #111;
+}
